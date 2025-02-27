@@ -15,3 +15,18 @@ nav {
     transform: scale(1.2);
     
 }
+
+/* Section alignment */
+.nav-offset {
+    padding-top: 70px;
+    margin-top: -70px;
+}
+
+
+.btn-gradient {
+    background: linear-gradient(to bottom, #198754 90%, #145a32 90%); /* Gradient color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
