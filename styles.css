@@ -1,0 +1,16 @@
+/* Font Styles */
+
+/* Navbar Styles */
+nav {
+    height: 70px;
+}
+
+.nav-link{
+    color: #000;
+    font-weight:bold;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for transform and opacity */
+}
+
+.nav-link:hover{
+    transform: scale(1.2);
+}
