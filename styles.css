@@ -15,23 +15,39 @@ nav {
     transform: scale(1.2);  
 }
 
-/* Section alignment */
 .nav-offset {
     padding-top: 70px;
     margin-top: -70px;
 }
 
-/* Btn gradient color */
-.btn-gradient {
+/* Landing Styles */
+.floating-span {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%)
+}
+
+@media (max-width: 768px) {
+    .floating-span {
+        position: relative;
+        display: block;
+        margin-top: 1rem;
+        left: auto;
+        transform: none;
+    }
+}
+
+  /* Menu Styles */
+  .menu-link:hover {
+    color: #000;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for transform and opacity */
+  }
+
+  .btn-gradient {
     background: linear-gradient(to bottom, #198754 90%, #145a32 90%); 
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
-  }
-
-  /*  */
-  .menu-link:hover {
-    color: #000;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for transform and opacity */
   }
