@@ -12,8 +12,7 @@ nav {
 }
 
 .nav-link:hover{
-    transform: scale(1.2);
-    
+    transform: scale(1.2);  
 }
 
 /* Section alignment */
@@ -22,11 +21,17 @@ nav {
     margin-top: -70px;
 }
 
-
+/* Btn gradient color */
 .btn-gradient {
-    background: linear-gradient(to bottom, #198754 90%, #145a32 90%); /* Gradient color */
+    background: linear-gradient(to bottom, #198754 90%, #145a32 90%); 
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+  }
+
+  /*  */
+  .menu-link:hover {
+    color: #000;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for transform and opacity */
   }
