@@ -343,16 +343,20 @@
     </footer>
     <script>
         // Navbar Collapse
-        document.addEventListener('DOMContentLoaded', function() {
-            let navLinks = document.querySelectorAll('.nav-links a');
-            let navCollapse = document.querySelector('.nav-collapse');
+        document.addEventListener('DOMContentLoaded', function () {
+            let navLinks = document.querySelectorAll('.nav-link');
+            let navCollapse = document.getElementById('collapsible-navbar');
 
             navLinks.forEach(function (link) {
                 link.addEventListener('click', function () {
-                    navCollapse.classList.remove('show');
+                    let bsCollapse = new bootstrap.Collapse(navCollapse, {
+                        toggle: false
+                    });
+                    bsCollapse.hide();
                 });
             });
         });
+
 
         // Book a Table Button
         function bookingForm() {
