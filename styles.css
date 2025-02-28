@@ -13,6 +13,9 @@ nav {
 
 .nav-link:hover{
     transform: scale(1.2);  
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: #145a32;
 }
 
 .nav-offset {
@@ -50,4 +53,9 @@ nav {
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+  }
+
+  .btn:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
