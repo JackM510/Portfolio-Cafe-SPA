@@ -11,11 +11,11 @@ nav {
     transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for transform and opacity */
 }
 
-.nav-link:hover{
-    transform: scale(1.2);  
-    text-decoration: underline;
-    text-underline-offset: 0.5rem;
-    text-decoration-color: #145a32;
+.nav-effect:hover{
+  transform: scale(1.2);  
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: #145a32;
 }
 
 .nav-offset {
@@ -42,11 +42,25 @@ nav {
 }
 
   /* Menu Styles */
-  .menu-link:hover {
-    color: #000;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for transform and opacity */
+  .menu-item {
+    overflow: hidden;
   }
 
+  .menu-effect:hover{
+    color: inherit;
+    transform: scale(1.2);
+    transform-origin: center;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: #145a32;
+  }
+
+  .menu-effect.active {
+    border: none;
+    box-shadow: 0px 1px 0px white;
+  }
+
+  /* Button Styles */
   .btn-gradient {
     background: linear-gradient(to bottom, #198754 90%, #145a32 90%); 
     color: white;
