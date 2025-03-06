@@ -9,7 +9,6 @@ nav {
   color: #000;
   font-weight: bold;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  /* Smooth transition for transform and opacity */
 }
 
 .nav-effect:hover {
@@ -17,6 +16,52 @@ nav {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
   text-decoration-color: #145a32;
+}
+
+.nav-btn {
+  position: absolute; 
+  right: 15px; 
+  top: 50%; 
+  transform: translateY(-50%);
+}
+
+.nav-btn a:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+@media (max-width: 1200px) {
+  .nav-link {
+    width: 8rem !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-link {
+    width: 6rem !important;
+  }
+}
+
+@media (max-width: 780px) {
+  .nav-link {
+    width: auto !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #collapsible-navbar {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+  }
+  .nav-btn {
+    position: relative !important;
+    display: inline-block;
+    top: auto !important;
+    right: auto !important;
+    transform: none !important;
+    width: 100%;
+  }
 }
 
 .nav-offset {
@@ -75,11 +120,10 @@ nav {
   background: linear-gradient(to bottom, #198754 90%, #145a32 90%);
   color: white;
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 8px 15px;
 }
 
-.btn:hover {
+.book-btn:hover {
   transform: scale(1.2);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }

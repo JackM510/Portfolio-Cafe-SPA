@@ -20,38 +20,38 @@
 
 <body class="smooth-scroll">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg sticky-top">
+    <nav class="navbar navbar-expand-md bg-light navbar-light shadow-lg sticky-top">
         <!-- Nav Logo -->
-        <div class="container-fluid d-flex justify-content-between align-items-center p-0">
-            
+        <div class="container-fluid p-0">
             <!-- Collapsible Navbar Toggler-->
             <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- Nav Links -->
-            <div class="collapse navbar-collapse text-center bg-light" id="collapsible-navbar">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item mx-5">
-                        <a class="nav-link nav-effect" href="#">HOME</a>
+            <div class="collapse navbar-collapse bg-light" id="collapsible-navbar" >
+                <!-- Nav Links -->
+                <ul class="navbar-nav d-flex justify-content-center align-items-center p-0 my-0 mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-effect text-center" href="#" style="width: 10rem;">HOME</a>
                     </li>
-                    <li class="nav-item mx-5">
-                        <a class="nav-link nav-effect" href="#about">ABOUT</a>
+                    <li class="nav-item">
+                        <a class="nav-link nav-effect text-center" href="#about" style="width: 10rem;">ABOUT</a>
                     </li>
-                    <li class="nav-item mx-5">
-                        <a class="nav-link nav-effect" href="#gallery">GALLERY</a>
+                    <li class="nav-item">
+                        <a class="nav-link nav-effect text-center" href="#gallery" style="width: 10rem;">GALLERY</a>
                     </li>
-                    <li class="nav-item mx-5">
-                        <a class="nav-link nav-effect" href="#menu">MENU</a>
+                    <li class="nav-item">
+                        <a class="nav-link nav-effect text-center" href="#menu" style="width: 10rem;">MENU</a>
                     </li>
-                    <li class="nav-item mx-5">
-                        <a class="nav-link nav-effect" href="#contact">CONTACT</a>
+                    <li class="nav-item">
+                        <a class="nav-link nav-effect text-center" href="#contact" style="width: 10rem;">CONTACT</a>
                     </li>
                 </ul>
-                 <!-- Nav Button -->
-                 <div class="navbar-nav me-3">
-                    <a class="btn btn-sm btn-success rounded-0 fw-bold btn-gradient m-auto" href="#book">BOOK TABLE</a>
+                <!-- Book Table Button -->
+                <div class="navbar-nav nav-btn">
+                    <a class="btn btn-sm btn-success rounded-0 text-center fw-bold btn-gradient" href="#book" id="nav-btn">BOOK TABLE</a>
                 </div>
             </div>
+            
         </div>
     </nav>
 
@@ -288,7 +288,7 @@
                         <textarea class="form-control form-control-lg bg-light rounded-0" style="resize:none;" rows="5" placeholder="Message" id="message-input"></textarea>
                     </div>
                     <div class="d-flex flex-column align-items-center">
-                        <button type="submit" class="btn btn-success btn-lg rounded-0 fw-bold mt-4 btn-gradient">CONFIRM</button>
+                        <button type="submit" class="btn btn-success btn-lg rounded-0 fw-bold mt-4 btn-gradient book-btn">CONFIRM</button>
                     </div>
                 </form>
             </div>
@@ -319,6 +319,7 @@
         // Navbar Collapse
         document.addEventListener('DOMContentLoaded', function () {
             let navLinks = document.querySelectorAll('.nav-link');
+            let navBtn = document.querySelector('#nav-btn');
             let navCollapse = document.getElementById('collapsible-navbar');
 
             navLinks.forEach(function (link) {
@@ -328,6 +329,13 @@
                     });
                     bsCollapse.hide();
                 });
+            });
+
+            navBtn.addEventListener('click', function () {
+                let bsCollapse = new bootstrap.Collapse(navCollapse, {
+                        toggle: false
+                    });
+                    bsCollapse.hide();
             });
         });
 
@@ -420,8 +428,6 @@
             
             return true;
         }
-
-
 
         // Opening Hours Dropdown
         const openingHours = {
