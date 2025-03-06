@@ -42,9 +42,10 @@ nav {
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 800px) {
   .nav-link {
     width: auto !important;
+    margin: 0 5px !important;
   }
 }
 
