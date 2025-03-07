@@ -113,12 +113,12 @@ nav {
 }
 
 /* About Us Styles */
-.styled-hr {
-  width: 50%;
+.heading-underline {
+  display: inline-block;
+  position: relative;
   margin: 0 auto;
-  border: none;
-  height: 2px; /* Adjust the height as needed */
-  background-color: black; /* Adjust the color as needed */
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ddd;
 }
 
 /* Menu Styles */
