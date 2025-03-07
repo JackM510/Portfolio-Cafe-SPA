@@ -1,6 +1,10 @@
 /* Font Styles */
 
 /* Navbar Styles */
+html {
+  scroll-padding-top: 70px;
+}
+
 nav {
   height: 70px;
 }
@@ -63,11 +67,6 @@ nav {
     transform: none !important;
     width: 100%;
   }
-}
-
-.nav-offset {
-  padding-top: 70px;
-  margin-top: -70px;
 }
 
 /* Landing Styles */
