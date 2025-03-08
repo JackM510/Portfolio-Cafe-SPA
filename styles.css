@@ -174,3 +174,9 @@ textarea:focus {
   opacity: 0.8;
   transition: transform 0.3s, opacity 0.3s ease;
 }
+
+/* Shared Styles */
+p {
+  font-size:1.3rem;
+  color: grey;
+}
