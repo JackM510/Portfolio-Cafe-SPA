@@ -86,19 +86,19 @@ nav {
 @media (max-width: 1200px) {
   .floating-span h1 {
     font-size: 3.5rem !important;
-}
+  }
 }
 
 @media (max-width: 992px) {
   .floating-span h1 {
     font-size: 2.5rem !important;
-}
+  } 
 }
 
 @media (max-width: 768px) {
   .floating-span h1 {
     font-size: 2rem !important;
-}
+  }
 }
 
 @media (max-width: 576px) {
@@ -119,6 +119,16 @@ nav {
   margin: 0 auto;
   padding-bottom: 16px;
   border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 1200px) {
+  #about-location {
+    margin-top: 0 !important;
+  }
+
+  #about-location-txt {
+    padding-top: 0 !important;
+  }
 }
 
 /* Menu Styles */
