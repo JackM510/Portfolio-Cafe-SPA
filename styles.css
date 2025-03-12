@@ -121,13 +121,30 @@ nav {
   border-bottom: 1px solid #ddd;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
   #about-location {
     margin-top: 0 !important;
   }
 
   #about-location-txt {
     padding-top: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #about-coffee-txt {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  #about-ingredients-txt {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  #about-location-txt {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
 }
 
@@ -183,7 +200,6 @@ nav {
   height: 30px;
   z-index: 1050;
 }
-
 
 .carousel-control-prev,
 .carousel-control-next {
