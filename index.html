@@ -347,41 +347,36 @@
                 <form id="book-form" onsubmit="bookingForm()">
                     <!-- Name -->
                     <div class="mb-4">
-                        <<<<<<< Updated upstream <input type="text"
+                        <input type="text"
                             class="form-control form-control-lg bg-light rounded-0" placeholder="Name*" id="name-input"
                             required>
                     </div>
-                    =======
-                    <input type="text" class="form-control form-control-lg bg-light rounded-0" placeholder="Name*"
-                        id="name-input" required>
+                    <!-- Phone -->
+                    <div class="mb-4">
+                        <input type="tel" class="form-control form-control-lg bg-light rounded-0" placeholder="Phone*"
+                            id="phone-input" required>
+                    </div>
+                    <!-- Date Time -->
+                    <div class="mb-4">
+                        <input type="datetime-local" class="form-control form-control-lg bg-light rounded-0" placeholder="Date"
+                            id="dateTime-input" required>
+                    </div>
+                    <!-- Number of people -->
+                    <div class="mb-4">
+                        <input type="text" class="form-control form-control-lg bg-light rounded-0"
+                            placeholder="Number of people*" id="people-input" required>
+                    </div>
+                    <!-- Message -->
+                    <div>
+                        <textarea class="form-control form-control-lg bg-light rounded-0" style="resize:none;" rows="5"
+                            placeholder="Message" id="message-input"></textarea>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <button type="submit"
+                            class="btn btn-success btn-lg rounded-0 fw-bold mt-4 btn-gradient book-btn">CONFIRM</button>
+                    </div>
+                </form>
             </div>
-            >>>>>>> Stashed changes
-            <!-- Phone -->
-            <div class="mb-4">
-                <input type="tel" class="form-control form-control-lg bg-light rounded-0" placeholder="Phone*"
-                    id="phone-input" required>
-            </div>
-            <!-- Date Time -->
-            <div class="mb-4">
-                <input type="datetime-local" class="form-control form-control-lg bg-light rounded-0" placeholder="Date"
-                    id="dateTime-input" required>
-            </div>
-            <!-- Number of people -->
-            <div class="mb-4">
-                <input type="text" class="form-control form-control-lg bg-light rounded-0"
-                    placeholder="Number of people*" id="people-input" required>
-            </div>
-            <!-- Message -->
-            <div>
-                <textarea class="form-control form-control-lg bg-light rounded-0" style="resize:none;" rows="5"
-                    placeholder="Message" id="message-input"></textarea>
-            </div>
-            <div class="d-flex flex-column align-items-center">
-                <button type="submit"
-                    class="btn btn-success btn-lg rounded-0 fw-bold mt-4 btn-gradient book-btn">CONFIRM</button>
-            </div>
-            </form>
-        </div>
         </div>
     </section>
 
