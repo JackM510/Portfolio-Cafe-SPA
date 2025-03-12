@@ -131,6 +131,76 @@ nav {
   }
 }
 
+/* Gallery Styles */
+.gallery-img:hover {
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Full viewport height to ensure proper centering */
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  
+  margin: 0; /* Remove default margins */
+}
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+}
+.modal.active {
+  display: flex; /* Show modal when active */
+}
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.modal-content {
+  background: none; /* Removes modal background */
+  border: none; /* Removes modal border */
+}
+
+/* Close Button Default (Mobile Behavior) */
+.btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 30px;
+  height: 30px;
+  z-index: 1050;
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%; /* Vertically centers the controls */
+    transform: translateY(-50%);
+    z-index: 1; /* Ensures the controls are visible above the image */
+}
+
+.carousel-control-prev {
+    left: -60px;
+}
+
+.carousel-control-next {
+    right: -60px;
+}
+
 /* Menu Styles */
 .menu-item {
   overflow: hidden;
