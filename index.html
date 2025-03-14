@@ -164,22 +164,24 @@
         </div>
 
         <!-- Modal -->
-        <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header border-0">
-                        <h1 class="modal-title" id="modalTitle">test</h1>
+        <div class="modal fade justify-content-center align-items-center m-0" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+                <div class="modal-content border-0">
+                    <div class="modal-header border-0 pb-0">
+                        <p class="modal-title text-white" id="modalTitle" style="opacity: 0.5;"></p>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body d-flex text-center">
+                    <div class="modal-body d-flex text-center pt-0 pb-0">
                         <button class="carousel-control-prev" id="prevImage">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
                         <img id="modalImage" class="img-fluid" src="" alt="Expanded Image">
                         <button class="carousel-control-next" id="nextImage">
-                            <span class="carousel-control-next-icon"></span>
+                            <span class="carousel-control-next-icon text-white"></span>
                         </button>
                     </div>
+                    <div class="modal-footer border-0">
+                    </div>                  
                 </div>
             </div>
         </div>
@@ -444,13 +446,15 @@
         function updateModalImage() {
             modalImage.src = thumbnails[currentIndex].src;
             modalTitle.innerHTML = currentIndex+1 + ' / ' + thumbnails.length;
-            
         }
 
         // Navigate to the previous image
         prevButton.addEventListener('click', () => {
             if (currentIndex > 0) {
                 currentIndex--;
+                updateModalImage();
+            } else if (currentIndex == 0) {
+                currentIndex = thumbnails.length - 1;
                 updateModalImage();
             }
         });
@@ -460,9 +464,11 @@
             if (currentIndex < thumbnails.length - 1) {
                 currentIndex++;
                 updateModalImage();
+            } else if (currentIndex == thumbnails.length - 1) {
+                currentIndex = 0;
+                updateModalImage();
             }
         });
-
 
         // Book a Table Button
         function bookingForm() {
