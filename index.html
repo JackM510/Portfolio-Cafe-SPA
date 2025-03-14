@@ -13,8 +13,11 @@
         crossorigin="anonymous"></script>
     <!-- Google Font -->
 
-    <!-- Custom CSS -->
+    <!-- Custom CSS and JS -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="js/contact.js" defer></script>
+
     <title>Placeholder</title>
     <!-- Place Holder -->
     <link rel="icon" href="" class="text-white">
@@ -292,13 +295,11 @@
                 <ul class="list-unstyled">
                     <li class="mb-4 contact-link">
                         <a href="https://www.google.com/maps/place/35+The+Esplanade,+Torquay,+VIC+3228"
-                            style="font-size:1.3rem; text-decoration:none; color:inherit;">35 The Esplanade, Torquay,
-                            VIC,
-                            3228</a>
+                            style="font-size:1.3rem; text-decoration:none; color:inherit;">35 The Esplanade, Torquay VIC 3228, Australia</a>
                     </li>
                     <li class="mb-4 contact-link">
                         <a href="mailto:enquiries@cafe-aroma.com"
-                            style="font-size:1.3rem; text-decoration:underline; color:inherit;">enquiries@placeholder.com</a>
+                            style="font-size:1.3rem; color:inherit; text-decoration: none;">enquiries@placeholder.com</a>
                     </li>
                     <li class="contact-link">
                         <a href="tel:+61352959955" style="font-size:1.3rem; text-decoration:none; color:inherit;">(03)
@@ -307,23 +308,14 @@
                     </li>
                 </ul>
             </div>
-            ` <div class="container mt-5">
-                <h2 class="text-center">Opening Hours</h2>
+            ` <div class="container mt-2">
+                <h2 class="text-center">Hours</h2>
                 <hr class="contact-hr mb-3" style="width: 50%; margin: 0 auto;">
                 <div class="text-center">
                     <div class="collapse-header" data-bs-toggle="collapse" data-bs-target="#collapseHours"
                         aria-expanded="false" aria-controls="collapseHours">
-                        <span id="currentDayHours" style="text-decoration: underline;"></span>
-                    </div>
-                    <div class="collapse" id="collapseHours">
-                        <div class="card card-body">
-                            <p id="Monday" class="mb-0">Monday - 9:00 AM - 5:00 PM</p>
-                            <p id="Tuesday" class="mb-0">Tuesday - 9:00 AM - 5:00 PM</p>
-                            <p id="Wednesday" class="mb-0">Wednesday - 9:00 AM - 5:00 PM</p>
-                            <p id="Thursday" class="mb-0">Thursday - 9:00 AM - 5:00 PM</p>
-                            <p id="Friday" class="mb-0">Friday - 9:00 AM - 5:00 PM</p>
-                            <p id="Saturday" class="mb-0">Saturday - 10:00 AM - 4:00 PM</p>
-                            <p id="Sunday" class="mb-0">Sunday - Closed</p>
+                        <p id="currentDayHours" style="text-shadow: 0 0 20px rgba(0, 255, 0, 1); mix-blend-mode: multiply;"></p>
+                        <div class="collapse" id="collapseHours">
                         </div>
                     </div>
                 </div>
@@ -418,8 +410,6 @@
                 bsCollapse.hide();
             });
         });
-
-        // Photo Gallery - Lightbox
 
         // Select modal elements
         const modal = document.getElementById('galleryModal');
@@ -558,23 +548,6 @@
             return true;
         }
 
-        // Opening Hours Dropdown
-        const openingHours = {
-            'Monday': '7:00 AM - 3:00 PM',
-            'Tuesday': '7:00 AM - 3:00 PM',
-            'Wednesday': '7:00 AM - 3:00 PM',
-            'Thursday': '7:00 AM - 3:00 PM',
-            'Friday': '7:00 AM - 3:00 PM',
-            'Saturday': '8:00 AM - 3:00 PM',
-            'Sunday': 'Closed'
-        };
-        function showTodayHours() {
-            const today = new Date().toLocaleString('en-US', { weekday: 'long' });
-            const currentHours = openingHours[today];
-            document.getElementById('currentDayHours').textContent = today + ' - ' + currentHours;
-            document.getElementById(today).classList.add('current-day');
-        }
-        document.addEventListener('DOMContentLoaded', showTodayHours);
     </script>
 </body>
 

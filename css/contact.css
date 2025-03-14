@@ -1,0 +1,18 @@
+@media (max-width: 992px) {
+    .contact-hr {
+      width: 100% !important;
+    }
+  }
+  
+  .contact-link {
+    font-size: 1.3rem;
+    color: grey;
+  }
+
+  .contact-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  

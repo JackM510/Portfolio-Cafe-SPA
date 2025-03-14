@@ -248,33 +248,7 @@ nav {
 .menu-effect.active {
   border: none;
   box-shadow: 0px 1px 0px white;
-}
-
-/* Contact Style */ 
-@media (max-width: 992px) {
-  .contact-hr {
-    width: 100% !important;
-  }
-}
-
-.contact-link:hover {
-  transform: scale(1.2);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Button Styles */
-.btn-gradient {
-  background: linear-gradient(to bottom, #198754 90%, #145a32 90%);
-  color: white;
-  border: none;
-  padding: 8px 15px;
-}
-
-.book-btn:hover {
-  transform: scale(1.2);
-  opacity: 0.8;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
+} 
 
 /* Book Table Styles */
 input:focus,
@@ -282,6 +256,12 @@ textarea:focus {
   border-color: black !important;
   box-shadow: none !important;
   outline: none;
+}
+
+.book-btn:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* Footer Styles */
@@ -301,4 +281,11 @@ textarea:focus {
 p {
   font-size:1.3rem;
   color: grey;
+}
+
+.btn-gradient {
+  background: linear-gradient(to bottom, #198754 90%, #145a32 90%);
+  color: white;
+  border: none;
+  padding: 8px 15px;
 }
