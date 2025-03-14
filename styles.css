@@ -149,6 +149,11 @@ nav {
 }
 
 /* Gallery Styles */
+.gallery-img {
+  object-fit: cover !important;
+  height: 100%;
+}
+
 .gallery-img:hover {
   opacity: 0.8;
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -236,6 +241,8 @@ nav {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
   text-decoration-color: #145a32;
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .menu-effect.active {
