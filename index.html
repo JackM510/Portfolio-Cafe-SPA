@@ -13,9 +13,13 @@
         crossorigin="anonymous"></script>
     <!-- Google Font -->
 
-    <!-- Custom CSS and JS -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/contact.css">
+
+    <!-- Custom JS -->
+    <script src="js/menu.js" defer></script>
     <script src="js/contact.js" defer></script>
 
     <title>Placeholder</title>
@@ -195,81 +199,31 @@
                 <h1 class="display-6 bg-dark text-white fw-bold py-1 px-3">MENU</h1>
             </div>
             <div class="mt-5 border">
-                <!-- Menu - Dynamic Tabs -->
+                <!-- Menu Tabs -->
                 <ul class="nav nav-tabs nav-justified justify-content-center bg-light border-0">
                     <li class="nav-item menu-item">
-                        <a class="nav-link menu-effect rounded-0 py-3" data-bs-toggle="tab" href="#tab1">BREAKFAST</a>
+                        <a class="nav-link menu-effect text-dark rounded-0 py-3" data-bs-toggle="tab" href="#tab1">BREAKFAST</a>
                     </li>
                     <li class="nav-item menu-item">
-                        <a class="nav-link menu-effect rounded-0 py-3" data-bs-toggle="tab" href="#tab2">LUNCH</a>
+                        <a class="nav-link menu-effect text-dark rounded-0 py-3" data-bs-toggle="tab" href="#tab2">LUNCH</a>
                     </li>
                     <li class="nav-item menu-item">
-                        <a class="nav-link menu-effect rounded-0 py-3" data-bs-toggle="tab" href="#tab3">DRINKS</a>
+                        <a class="nav-link menu-effect text-dark rounded-0 py-3" data-bs-toggle="tab" href="#tab3">DRINKS</a>
                     </li>
                 </ul>
                 <!-- Tab Panes -->
-                <div class="tab-content shadow">
-                    <!-- Tab 1 -->
+                <div class="tab-content shadow pb-3">
+                    <!-- Breakfast -->
                     <div class="tab-pane container active" id="tab1">
-                        <!-- Row 1/4 -->
-                        <div class="row">
-                            <div class="col-12 col-md-6 card rounded-0 border-0">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title<span class="float-end">$19</span></h5>
-                                    <p class="card-text">Short desc.</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 card rounded-0 border-0 ">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title<span class="float-end">$19</span></h5>
-                                    <p class="card-text">Short desc.</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 card rounded-0 border-0 ">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title<span class="float-end">$19</span></h5>
-                                    <p class="card-text">Short desc.</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 card rounded-0 border-0 ">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title<span class="float-end">$19</span></h5>
-                                    <p class="card-text">Short desc.</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 card rounded-0 border-0 ">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title<span class="float-end">$19</span></h5>
-                                    <p class="card-text">Short desc.</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 card rounded-0 border-0 ">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title<span class="float-end">$19</span></h5>
-                                    <p class="card-text">Short desc.</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 card rounded-0 border-0 ">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title<span class="float-end">$19</span></h5>
-                                    <p class="card-text">Short desc.</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 card rounded-0 border-0 ">
-                                <div class="card-body">
-                                    <h5 class="card-title">Title<span class="float-end">$19</span></h5>
-                                    <p class="card-text">Short desc.</p>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="row" id="menu-breakfast"></div>
                     </div>
-                    <!-- Tab 2 -->
+                    <!-- Lunch -->
                     <div class="tab-pane container fade" id="tab2">
-
+                        <div class="row" id="menu-lunch"></div>
                     </div>
-                    <!-- Tab 3 -->
+                    <!-- Drinks -->
                     <div class="tab-pane container fade" id="tab3">
-
+                        <div class="row" id="menu-drinks"></div>
                     </div>
                 </div>
             </div>
