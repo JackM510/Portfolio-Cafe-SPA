@@ -9,7 +9,7 @@ fetch('./data/menu.json')
         return response.json(); // Parse the JSON file
     })
     .then(data => {
-        menu = data.menu; // Access the 'menu' object from your JSON
+        menu = data.Menu; // Access the 'menu' object from your JSON
         // Load the menu
         // Call the function for each menu category
         populateCategory("Breakfast", "menu-breakfast");
