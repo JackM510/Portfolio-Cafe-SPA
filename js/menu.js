@@ -1,67 +1,31 @@
-const menu = {
-    Breakfast: {
-        'BREAKY CLASSICS': [
-            { name: "AVOCADO SMASH", description: "avocado, feta, mint & lemon on seeded toast w/ poached eggs", price: "$21.0"},
-            { name: "Smashed Avo", description: "Fluffy pancakes with syrup", price: "$8.50"},
-            { name: "Smashed Avo", description: "Fluffy pancakes with syrup", price: "$8.50"},
-            { name: "Smashed Avo", description: "Fluffy pancakes with syrup", price: "$8.50"},
-            { name: "Smashed Avo", description: "Fluffy pancakes with syrup", price: "$8.50"},
-            { name: "GRAND BREKKIE", description: "poached eggs on sourdough with avocado, spinach, mushroom, grilled tomato, hash brown & relish", price: "$26.0", badge: "Popular"}
-        ],
-        'BREAKY BOWLS': [
-            { name: "ACAI BOWL", description: "blueberry, banana, acai & organic almond milk w/ granola, strawberry, buckinis & coconut", price: "$17.0"},
-            { name: "GOLDEN OATS", description: "mango soaked oats, yellow kiwifruit, dragon fruit, mango, toasted coconut & passionfruit yoghurt", price: "$19"}
-        ],
-        'WAFFLES & PANCAKES': [
-            { name: "BLUEBERRY WAFFLES", description: "Fluffy pancakes with syrup", price: "$21.0", badge: "Popular" },
-            { name: "Chocolate Waffles", description: "with honeycomb, passionfruit icecream, chocolate flakes & chocolate drizzle", price: "$22.0", badge: "Popular" },
-            { name: "MATCHA PANCAKES", description: "fluffy pancakes with blueberries, blackberries, strawberries, berry puree, nuts", price: "$25.0", badge: "Popular" }
-        ]   
-    },       
-    Lunch: {
-        'LUNCH GO-TO': [
-            { name: "Smashed Avo", description: "Fluffy pancakes with syrup", price: "$8.50"},
-            { name: "Smashed Avo", description: "Fluffy pancakes with syrup", price: "$8.50"},
-            { name: "Smashed Avo", description: "Fluffy pancakes with syrup", price: "$8.50"},
-            { name: "Smashed Avo", description: "Fluffy pancakes with syrup", price: "$8.50"},
-            { name: "Smashed Avo", description: "Fluffy pancakes with syrup", price: "$8.50"},
-            { name: "The Big Breakfast", description: "Fluffy pancakes with syrup", price: "$8.50"}
-        ],
-        'BOWLS': [
-            { name: "Matcha Pancakes", description: "Fluffy pancakes with syrup", price: "$8.50"},
-            { name: "Pancakes", description: "Fluffy pancakes with syrup", price: "$8.50"}
-        ],
-        'SALADS': [
-            { name: "SUPERFOOD SALAD", description: "kale, broccoli, avocado, quinoa, pearl cous cous, pomegranate & seeds w/ mustard dressing", price: "$19.0" },
-            { name: "Pancakes", description: "Fluffy pancakes with syrup", price: "$8.50", badge: "Popular" }
-        ]  
-    },       
-    Drinks: {
-        "COFFEE": [
-          { name: "Latte", description: "Smooth coffee with milk", price: "$4.00", badge: "New" },
-          { name: "Iced Coffee", description: "Smooth coffee with milk", price: "$4.00", badge: "New" },
-          { name: "Latte", description: "Smooth coffee with milk", price: "$4.00", badge: "New" },
-          { name: "Espresso", description: "Strong black coffee", price: "$3.00" }
-        ],
-        'FRESH JUICES': [
-          { name: "Orange Juice", description: "Freshly squeezed orange juice", price: "$3.00" },
-          { name: "Orange Juice", description: "Freshly squeezed orange juice", price: "$3.00" },
-          { name: "ANTI VIRUS", description: "pineapple, orange, ginger, lemon, carrot", price: "$3.00" },
-          { name: "SUPER DETOX", description: "carrot, celery, lemon, ginger, kale", price: "$3.00" },
-          { name: "Apple Juice", description: "Fresh apple juice", price: "$3.00" }
-        ],
-        SMOOTHIES: [
-          { name: "Berrylicious", description: "strawberries, blueberries, raspberries, goji berries, acai berries", price: "$5.00" },
-          { name: "PASSION", description: "passionfruit, mango, goji berries, mango sorbet", price: "$5.00" },
-          { name: "BERRYLICIOUS", description: "Mixed berry smoothie", price: "$5.00" },
-          { name: "MANGO REFRESH", description: "mango, mango sorbet", price: "$5.00" }
-        ]
-    }
-  };
-  
+let menu = {};
+
+// Fetch the JSON file
+fetch('./data/menu.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Failed to fetch JSON: ${response.status}`);
+        }
+        return response.json(); // Parse the JSON file
+    })
+    .then(data => {
+        menu = data.menu; // Access the 'menu' object from your JSON
+        // Load the menu
+        // Call the function for each menu category
+        populateCategory("Breakfast", "menu-breakfast");
+        populateCategory("Lunch", "menu-lunch");
+        populateCategory("Drinks", "menu-drinks");
+
+        // Manually trigger Bootstrap's tab logic for the default active tab
+        const defaultTab = document.querySelector('a[href="#tab1"]'); // Breakfast tab
+        const bootstrapTab = new bootstrap.Tab(defaultTab);
+        bootstrapTab.show(); // Simulates a user clicking the Breakfast tab
+
+    })
+    .catch(error => console.error('Error:', error));
 
 
-  const populateCategory = (category, containerId) => {
+const populateCategory = (category, containerId) => {
     const container = document.getElementById(containerId);
     const items = menu[category];
   
@@ -133,15 +97,3 @@ const menu = {
     // Append the card to the provided container
     container.appendChild(card);
   };
-  
-  
-
-    // Call the function for each menu category
-    populateCategory("Breakfast", "menu-breakfast");
-    populateCategory("Lunch", "menu-lunch");
-    populateCategory("Drinks", "menu-drinks");
-
-    // Manually trigger Bootstrap's tab logic for the default active tab
-    const defaultTab = document.querySelector('a[href="#tab1"]'); // Breakfast tab
-    const bootstrapTab = new bootstrap.Tab(defaultTab);
-    bootstrapTab.show(); // Simulates a user clicking the Breakfast tab
