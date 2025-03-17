@@ -9,8 +9,7 @@ fetch('./data/menu.json')
         return response.json(); // Parse the JSON file
     })
     .then(data => {
-        menu = data.Menu; // Access the 'menu' object from your JSON
-        // Load the menu
+        menu = data.Menu; // Access the 'Menu' object from your JSON
         // Call the function for each menu category
         populateCategory("Breakfast", "menu-breakfast");
         populateCategory("Lunch", "menu-lunch");
@@ -64,7 +63,7 @@ const populateCategory = (category, containerId) => {
   const createMenuCard = (item, container) => {
     // Create the card container (no column classes here)
     const card = document.createElement("div");
-    card.classList.add("col-12", "col-md-6", "card", "rounded-0", "border-0", "px-5", "menu-card"); // Removed "col-12" and "col-md-6"
+    card.classList.add("col-12", "card", "rounded-0", "border-0", "px-5", "menu-card");
   
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body");

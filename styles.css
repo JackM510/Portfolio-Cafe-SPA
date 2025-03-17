@@ -9,13 +9,13 @@ nav {
   height: 70px;
 }
 
-.nav-link {
-  color: #000;
+.nav-a {
   font-weight: bold;
-  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.nav-effect:hover {
+.nav-a:hover {
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   transform: scale(1.2);
   text-decoration: underline;
   text-underline-offset: 0.5rem;
@@ -35,19 +35,19 @@ nav {
 }
 
 @media (max-width: 1200px) {
-  .nav-link {
+  .nav-a {
     width: 8rem !important;
   }
 }
 
 @media (max-width: 992px) {
-  .nav-link {
+  .nav-a {
     width: 6rem !important;
   }
 }
 
 @media (max-width: 800px) {
-  .nav-link {
+  .nav-a {
     width: auto !important;
     margin: 0 5px !important;
   }

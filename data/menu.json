@@ -1,15 +1,13 @@
 {
     "Menu": {
         "Breakfast": {
-            "BREAKY CLASSICS": [
+            "BREKKIE CLASSICS": [
                 { "name": "AVOCADO SMASH", "description": "avocado, feta, mint & lemon on seeded toast w/ poached eggs", "price": "$21.0"},
                 { "name": "Smashed Avo", "description": "Fluffy pancakes with syrup", "price": "$8.50"},
-                { "name": "Smashed Avo", "description": "Fluffy pancakes with syrup", "price": "$8.50"},
-                { "name": "Smashed Avo", "description": "Fluffy pancakes with syrup", "price": "$8.50"},
-                { "name": "Smashed Avo", "description": "Fluffy pancakes with syrup", "price": "$8.50"},
+                { "name": "AVOCADO SMASH", "description": "avocado, feta, mint & lemon on seeded toast w/ poached eggs", "price": "$21.0"},
                 { "name": "GRAND BREKKIE", "description": "poached eggs on sourdough with avocado, spinach, mushroom, grilled tomato, hash brown & relish", "price": "$26.0", "badge": "Popular"}
             ],
-            "BREAKY BOWLS": [
+            "BREKKIE BOWLS": [
                 { "name": "ACAI BOWL", "description": "blueberry, banana, acai & organic almond milk w/ granola, strawberry, buckinis & coconut", "price": "$17.0"},
                 { "name": "GOLDEN OATS", "description": "mango soaked oats, yellow kiwifruit, dragon fruit, mango, toasted coconut & passionfruit yoghurt", "price": "$19"}
             ],
