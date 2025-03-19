@@ -24,10 +24,15 @@ function showTodayHours() {
     currentHours.textContent = openingHours[today];
     currentHours.style = 'text-decoration: underline;';
 
-    todaysHours.innerHTML = 'Open today ';
-    todaysHours.appendChild(currentHours);
-    todaysHours.innerHTML += ' ';
-    todaysHours.appendChild(downArrow);
+    if (today == 'Sun'){
+        todaysHours.innerHTML = 'Closed on Sundays';
+    } else {
+        todaysHours.innerHTML = 'Open today ';
+        todaysHours.appendChild(currentHours);
+        todaysHours.innerHTML += ' ';
+    }
+
+    todaysHours.appendChild(downArrow);   
 }
 document.addEventListener('DOMContentLoaded', showTodayHours);
 
