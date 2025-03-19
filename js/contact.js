@@ -15,15 +15,14 @@ const todaysHours = document.getElementById('currentDayHours');
 // Display todays open hours on collapse
 function showTodayHours() {
 
-    const downArrow = document.createElement('span');
+    const downSpan = document.createElement('span');
     const downIcon = document.createElement('icon');
     downIcon.classList = "bi bi-caret-down-fill";
-    downArrow.appendChild(downIcon);
+    downSpan.appendChild(downIcon);
 
     const currentHours = document.createElement('span');
     currentHours.textContent = openingHours[today];
     currentHours.style = 'text-decoration: underline;';
-
     if (today == 'Sun'){
         todaysHours.innerHTML = 'Closed on Sundays';
     } else {
@@ -32,14 +31,14 @@ function showTodayHours() {
         todaysHours.innerHTML += ' ';
     }
 
-    todaysHours.appendChild(downArrow);   
+    todaysHours.appendChild(downSpan);   
 }
 document.addEventListener('DOMContentLoaded', showTodayHours);
 
 // Display open hours in a dropdown
 function showHoursDropdown() {
     let count = 0;
-``
+
     for (const day in openingHours) {
         const p = document.createElement('p');
         if (day === today) {
@@ -52,12 +51,13 @@ function showHoursDropdown() {
         }
 
         if (count == 0) {
-            const upArrow = document.createElement('span');
+            p.id = 'contactHoursDropdown';
+            const upSpan = document.createElement('span');
             const upIcon = document.createElement('icon');
             upIcon.classList = " bi bi-caret-up-fill";
-            upArrow.appendChild(upIcon);
+            upSpan.appendChild(upIcon);
             p.textContent += " ";
-            p.appendChild(upArrow);
+            p.appendChild(upSpan);
         }
     
 
