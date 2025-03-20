@@ -3,8 +3,11 @@
   }
 
   .menu-link {
-      font-weight: bold;
-      transition: transform 0.3s ease, opacity 0.3s ease;
+    font-weight: bold;
+  }
+
+  .menu-link.active {
+    background-color: rgb(255, 255, 255);
   }
 
   .menu-link:hover {
@@ -31,8 +34,30 @@
     }
   }
 
-  /*@media(max-width: 1400px) {
-    #menu-container {
-      width: 50% !important;
-    }
-  }*/
+  #menu-container {
+    width: 75% !important;
+}
+
+@media (max-width: 992px) {
+  #menu-container {
+      width: 100% !important;
+  }
+}
+
+.menu-badge {
+  margin: 0 !important;
+}
+
+.menu-price {
+  display: inline-block !important;
+  margin: 0 auto !important;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.diet-span {
+  color: grey;
+  letter-spacing: 1px;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}

@@ -61,7 +61,7 @@ const populateCategory = (category, containerId) => {
   
   
   const createMenuCard = (item, container) => {
-    // Create the card container (no column classes here)
+    // Create the card container
     const card = document.createElement("div");
     card.classList.add("col-12", "card", "rounded-0", "border-0", "px-5", "menu-card");
   
@@ -70,10 +70,18 @@ const populateCategory = (category, containerId) => {
   
     // Card title (item name and price)
     const cardTitle = document.createElement("h5");
-    cardTitle.classList.add("card-title");
+    cardTitle.classList.add("card-title", "align-items-center");
     cardTitle.innerHTML = `
-      ${item.name} <span class="float-end">${item.price}</span>
+      ${item.name} <span class="menu-price float-end">${item.price}</span>
     `;
+
+    // Dietary Span
+    if (item.dietary) {
+      const dietSpan = document.createElement('span');
+      dietSpan.textContent = item.dietary;
+      dietSpan.classList.add("badge", "diet-span");
+      cardTitle.appendChild(dietSpan);
+    }
   
     // Card description
     const cardDescription = document.createElement("p");
@@ -83,8 +91,13 @@ const populateCategory = (category, containerId) => {
     // Add badge (if exists)
     if (item.badge) {
       const badge = document.createElement("span");
-      badge.classList.add("badge", "bg-warning", "ms-2", "menu-badge");
       badge.textContent = item.badge;
+
+      if (badge.textContent == 'NEW') {
+        badge.classList.add("badge", "bg-success", "menu-badge");
+      } else if (badge.textContent == 'POPULAR') {
+        badge.classList.add("badge", "bg-warning", "menu-badge");
+      }
       cardTitle.appendChild(badge);
     }
   

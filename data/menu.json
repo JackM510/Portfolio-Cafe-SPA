@@ -2,53 +2,53 @@
     "Menu": {
         "Breakfast": {
             "BREKKIE CLASSICS": [
-                { "name": "AVOCADO SMASH", "description": "avocado, feta, mint & lemon on seeded toast w/ poached eggs", "price": "$21.0"},
-                { "name": "Smashed Avo", "description": "Fluffy pancakes with syrup", "price": "$8.50"},
-                { "name": "AVOCADO SMASH", "description": "avocado, feta, mint & lemon on seeded toast w/ poached eggs", "price": "$21.0"},
-                { "name": "GRAND BREKKIE", "description": "poached eggs on sourdough with avocado, spinach, mushroom, grilled tomato, hash brown & relish", "price": "$26.0", "badge": "Popular"}
+                { "name": "Avocado Smash", "dietary": "V|GF", "description": "avocado, feta, mint & lemon on seeded toast w/ poached eggs", "price": "$19.0"},
+                { "name": "Brekkie Burger", "dietary": "V|GF", "description": "fried egg, haloumi, avocado, spinach, chutney, jalapenos, with either bacon or potato hash", "price": "$20.0", "badge": "POPULAR"},
+                { "name": "Potato Hash", "dietary": "V|GF",  "description": "rocket, avocado, poached eggs, hollandaise w/ either smoked bacon, smoked salmon, or garlic thyme mushrooms", "price": "$23.0"},
+                { "name": "Grand Brekkie", "dietary": "VG|GF", "description": "poached eggs on sourdough with avocado, spinach, mushroom, grilled tomato, hash brown & relish", "price": "$26.0"}                
             ],
             "BREKKIE BOWLS": [
-                { "name": "ACAI BOWL", "description": "blueberry, banana, acai & organic almond milk w/ granola, strawberry, buckinis & coconut", "price": "$17.0"},
-                { "name": "GOLDEN OATS", "description": "mango soaked oats, yellow kiwifruit, dragon fruit, mango, toasted coconut & passionfruit yoghurt", "price": "$19"}
+                { "name": "Acai Bowl", "dietary": "VG|GF", "description": "blueberry, banana, acai & organic almond milk w/ granola, strawberry, buckinis & coconut", "price": "$17.0", "badge": "NEW"},
+                { "name": "Golden Oats", "dietary": "VG|GF", "description": "mango soaked oats, yellow kiwifruit, dragon fruit, mango, toasted coconut & passionfruit yoghurt", "price": "$19.0"}
             ],
             "WAFFLES & PANCAKES": [
-                { "name": "BLUEBERRY WAFFLES", "description": "Fluffy pancakes with syrup", "price": "$21.0", "badge": "Popular" },
-                { "name": "Chocolate Waffles", "description": "with honeycomb, passionfruit icecream, chocolate flakes & chocolate drizzle", "price": "$22.0", "badge": "Popular" },
-                { "name": "MATCHA PANCAKES", "description": "fluffy pancakes with blueberries, blackberries, strawberries, berry puree, nuts", "price": "$25.0", "badge": "Popular" }
+                { "name": "Blueberry Waffles", "dietary": "VG|GF", "description": "with cream, berry icecream, crushed nuts & berry puree", "price": "$21.0"},
+                { "name": "Chocolate Waffles", "dietary": "V|GF", "description": "with honeycomb, passionfruit icecream, chocolate flakes & chocolate drizzle", "price": "$22.0", "badge": "POPULAR" },
+                { "name": "Matcha Pancakes", "dietary": "VG|GF", "description": "fluffy pancakes with blueberries, blackberries, strawberries, berry puree, nuts", "price": "$25.0"}
             ]   
         },       
         "Lunch": {
             "LUNCH GO-TO": [
-                { "name": "Smashed Avo", "description": "Fluffy pancakes with syrup", "price": "$8.50"},
-                { "name": "Smashed Avo", "description": "Fluffy pancakes with syrup", "price": "$8.50"},
-                { "name": "Smashed Avo", "description": "Fluffy pancakes with syrup", "price": "$8.50"},
-                { "name": "Smashed Avo", "description": "Fluffy pancakes with syrup", "price": "$8.50"},
-                { "name": "Smashed Avo", "description": "Fluffy pancakes with syrup", "price": "$8.50"},
-                { "name": "The Big Breakfast", "description": "Fluffy pancakes with syrup", "price": "$8.50"}
+                { "name": "Broccoli Pesto", "dietary": "V|GF", "description": "pesto penne pasta with broccoli & fresh basil, pine nuts, rocket, lemon & peccorino", "price": "$25.0", "badge": "NEW" },
+                { "name": "Corn & Zucchini Fritters", "dietary": "VG|GF", "description": "topped with poached eggs, tomato relish, w/ avocado and rocket", "price": "$23.0" },
+                { "name": "Fish & Chips", "dietary": "GF", "description": "fresh local beer battered barramundi, squeeze of lemon w/ a side of chips and garden salad", "price": "$29.0" },
+                { "name": "Southern Burger", "dietary": "VG|GF", "description": "fried cauliflower or fried chicken, red cabbage slaw, chipotle, pickles w/ a side of chips and garden salad", "price": "$27.0", "badge": "POPULAR" }               
+
             ],
-            "BOWLS": [
-                { "name": "Matcha Pancakes", "description": "Fluffy pancakes with syrup", "price": "$8.50"}
-            ],
-            "SALADS": [
-                { "name": "SUPERFOOD SALAD", "description": "kale, broccoli, avocado, quinoa, pearl cous cous, pomegranate & seeds w/ mustard dressing", "price": "$19.0" }
-            ]  
+            "BOWLS & SALADS": [
+                { "name": "Burrito Bowl", "dietary": "VG|GF", "description": "chilli beans & corn, brown rice, salsa, spinach, avocado & lime w/ chipotle aioli", "price": "$22.0"},
+                { "name": "Green Bowl", "dietary": "VG|GF", "description": "kale, rocket, spinach, avocado, sprouts, goats cheese, seeds, broccolini, cauliflower w/ lemon-oregano vinaigrette", "price": "$24.0", "badge": "NEW" },
+                { "name": "Mediterranean Harvest", "dietary": "V|GF", "description": "mixed greens, cherry tomatoes, cucumber, red onion, kalamata olives, feta, roasted chickpeas w/ lemon-oregano vinaigrette", "price": "$22.0" },
+                { "name": "Superfood Salad", "dietary": "VG|GF", "description": "kale, broccoli, avocado, quinoa, pearl cous cous, pomegranate & seeds w/ mustard dressing", "price": "$19.0", "badge": "POPULAR" }
+            ] 
         },       
         "Drinks": {
             "COFFEE": [
-            { "name": "Latte", "description": "Smooth coffee with milk", "price": "$4.00", "badge": "New" },
-            { "name": "Iced Coffee", "description": "Smooth coffee with milk", "price": "$4.00", "badge": "New" }
+                { "name": "Torquay Roasters House Blend", "description": "bonsoy, almond, oat + $0.5, extra shot + $0.5", "price": "$5.20" },
+                { "name": "Iced Coffee", "description": "single shot blended w/ icecream & cream", "price": "$7.0" },
+                { "name": "Iced Latte", "description": "single shot blended w/ ice and milk", "price": "$5.50" }
             ],
             "FRESH JUICES": [
-            { "name": "Orange Juice", "description": "Freshly squeezed orange juice", "price": "$3.00" },
-            { "name": "ANTI VIRUS", "description": "pineapple, orange, ginger, lemon, carrot", "price": "$3.00" },
-            { "name": "SUPER DETOX", "description": "carrot, celery, lemon, ginger, kale", "price": "$3.00" },
-            { "name": "Apple Juice", "description": "Fresh apple juice", "price": "$3.00" }
+                { "name": "Anti Virus", "description": "pineapple, orange, ginger, lemon, carrot", "price": "$9.0", "badge": "NEW" },
+                { "name": "Recover", "description": "ginger, lemon, beetroot, cucumber, celery, carrot, apple", "price": "$10.50" },
+                { "name": "Revive", "description": "apple, lemon, pineapple, celery, cucumber", "price": "$9.0", "badge": "POPULAR" },
+                { "name": "Super Detox", "description": "carrot, celery, lemon, ginger, kale", "price": "$10.50" }
             ],
             "SMOOTHIES": [
-            { "name": "Berrylicious", "description": "strawberries, blueberries, raspberries, goji berries, acai berries", "price": "$5.00" },
-            { "name": "PASSION", "description": "passionfruit, mango, goji berries, mango sorbet", "price": "$5.00" },
-            { "name": "BERRYLICIOUS", "description": "Mixed berry smoothie", "price": "$5.00" },
-            { "name": "MANGO REFRESH", "description": "mango, mango sorbet", "price": "$5.00" }
+                { "name": "Berrylicious", "dietary": "VG", "description": "strawberries, blueberries, raspberries, acai berries, lemon sorbet", "price": "$10.0" },
+                { "name": "Mango Refresh", "dietary": "VG", "description": "mango, mango sorbet", "price": "$9.0", "badge": "POPULAR" },
+                { "name": "Passion", "dietary": "VG", "description": "passionfruit, mango, goji berries, mango sorbet", "price": "$10.0" },
+                { "name": "Tropical", "dietary": "VG", "description": "passion fruit, banana, coconut, pineapple, mango, lemon sorbet", "price": "$11.0", "badge": "NEW"}
             ]
         }
     }
