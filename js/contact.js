@@ -22,7 +22,7 @@ function showTodayHours() {
 
     const currentHours = document.createElement('span');
     currentHours.textContent = openingHours[today];
-    currentHours.style = 'text-decoration: underline;';
+    currentHours.style = 'text-decoration: underline; text-underline-offset: 0.4rem;';
     if (today == 'Sun'){
         todaysHours.innerHTML = 'Closed on Sundays';
     } else {

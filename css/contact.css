@@ -25,17 +25,17 @@
 
 
 #contactHoursDropdown {
-    position: relative; /* Establishes a positioning context */
+    position: relative;
     text-align: center;
     display:inline-block;
 }
 
 #contactHoursDropdown span {
-  position: absolute; /* Removes the icon from the flow so it doesn't push the text */
-  top: 50%; /* Vertically centers the icon relative to the text */
-  transform: translateY(-50%); /* Ensures perfect vertical alignment */
-  left: 100%; /* Positions the icon immediately to the right of the text */
-  margin-left: 5px; /* Adds a small gap between the text and the icon */
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%); 
+  left: 100%; 
+  margin-left: 5px; 
 }
 
 
