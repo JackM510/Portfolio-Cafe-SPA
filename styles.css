@@ -81,20 +81,6 @@
   }
 }
 
-/* Book Table Styles */
-input:focus,
-textarea:focus {
-  border-color: black !important;
-  box-shadow: none !important;
-  outline: none;
-}
-
-.book-btn:hover {
-  transform: scale(1.2);
-  opacity: 0.8;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
 /* Shared Styles */
 p {
   font-size:1.3rem;
