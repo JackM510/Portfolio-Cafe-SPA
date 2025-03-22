@@ -1,0 +1,11 @@
+#fb-icon:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+#ig-icon:hover{
+    transform: scale(1.2);
+    opacity: 0.8;
+    transition: transform 0.3s, opacity 0.3s ease;
+}
