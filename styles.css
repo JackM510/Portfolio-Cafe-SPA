@@ -43,42 +43,6 @@
   }
 }
 
-/* About Us Styles */
-.heading-underline {
-  display: inline-block;
-  position: relative;
-  margin: 0 auto;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #ddd;
-}
-
-@media (max-width: 992px) {
-  #about-location {
-    margin-top: 0 !important;
-  }
-
-  #about-location-txt {
-    padding-top: 0 !important;
-  }
-}
-
-@media (max-width: 768px) {
-  #about-coffee-txt {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-  
-  #about-ingredients-txt {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-  
-  #about-location-txt {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-}
-
 /* Gallery Styles */
 .gallery-img {
   object-fit: cover !important;
