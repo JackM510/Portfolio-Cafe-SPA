@@ -1,48 +1,5 @@
 /* Font Styles */
 
-/* Landing Styles */
-.floating-span {
-  position: absolute;
-  top: 50%;
-  left: 2%;
-  transform: translateY(-50%)
-}
-
-@media (max-width: 1400px) {
-  .floating-span h1 {
-      font-size: 3.5rem !important;
-  }
-}
-
-@media (max-width: 1200px) {
-  .floating-span h1 {
-    font-size: 3.5rem !important;
-  }
-}
-
-@media (max-width: 992px) {
-  .floating-span h1 {
-    font-size: 2.5rem !important;
-  } 
-}
-
-@media (max-width: 768px) {
-  .floating-span h1 {
-    font-size: 2rem !important;
-  }
-}
-
-@media (max-width: 576px) {
-  .floating-span {
-    position: relative;
-    display: block;
-    margin-top: 2rem;
-    left: auto;
-    transform: none;
-    text-align: center;
-  }
-}
-
 /* Gallery Styles */
 .gallery-img {
   object-fit: cover !important;
