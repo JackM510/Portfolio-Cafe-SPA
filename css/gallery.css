@@ -1,0 +1,79 @@
+.gallery-img {
+    object-fit: cover !important;
+    height: 100%;
+  }
+  
+  .gallery-img:hover {
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .modal img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: none;
+  }
+  
+  .modal-footer {
+    height: 48px;
+  }
+  
+  .btn-close {
+    width: 32px;
+    height: 32px;
+    z-index: 1;
+    background-color: transparent;
+    box-shadow: none;
+    filter: invert(1);
+  }
+  
+  .btn-close:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+  }
+  
+  .carousel-control-prev {
+      left: 2rem;
+  }
+  
+  .carousel-control-next {
+      right: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-control-prev {
+      left: 0px;
+    }
+  
+    .carousel-control-next {
+        right: 0px;
+    }
+  }
