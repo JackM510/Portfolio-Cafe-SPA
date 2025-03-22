@@ -9,6 +9,7 @@ html {
   
   .nav-a {
     font-weight: bold;
+    width: 10rem;
   }
   
   .nav-a:hover {
@@ -17,7 +18,7 @@ html {
     transform: scale(1.2);
     text-decoration: underline;
     text-underline-offset: 0.5rem;
-    text-decoration-color: #145a32;
+    text-decoration-color: #5aff70;
   }
   
   .nav-btn {
@@ -58,17 +59,21 @@ html {
       align-items: center !important;
       text-align: center;
       margin-top: 5px;
-      padding-bottom: 10px;
+      padding-bottom: 8px;
       box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    }
+
+    .nav-li {
+        width: 100% !important;
     }
 
     .nav-a:hover {
         opacity: 0.8;
-        transform: scale(1);
+        transform: none;
         transition: transform 0.3s ease, opacity 0.3s ease;
         text-decoration: underline;
         text-underline-offset: 0.5rem;
-        text-decoration-color: #145a32;
+        text-decoration-color: #5aff70;
       }
 
     .nav-btn {
