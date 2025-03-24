@@ -8,17 +8,19 @@ html {
   }
   
   .nav-a {
-    font-weight: bold;
+    font-weight: bolder;
+    font-size: 18px;
+    letter-spacing: 0.5px;
     width: 10rem;
   }
   
   .nav-a:hover {
-    opacity: 0.8;
+    opacity: 0.9;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    transform: scale(1.2);
+    transform: scale(1.1);
     text-decoration: underline;
     text-underline-offset: 0.5rem;
-    text-decoration-color: #5aff70;
+    text-decoration-color: #198754
   }
   
   .nav-btn {
@@ -26,10 +28,16 @@ html {
     right: 10px; 
     top: 50%; 
     transform: translateY(-50%);
+    
+  }
+
+  .nav-btn a {
+    font-size: 16px;
+    letter-spacing: 0.5px;
   }
   
   .nav-btn a:hover {
-    opacity: 0.8;
+    opacity: 0.9;
     transform: scale(1.1);
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
@@ -68,12 +76,12 @@ html {
     }
 
     .nav-a:hover {
-        opacity: 0.8;
+        opacity: 0.9;
         transform: none;
         transition: transform 0.3s ease, opacity 0.3s ease;
         text-decoration: underline;
         text-underline-offset: 0.5rem;
-        text-decoration-color: #5aff70;
+        text-decoration-color: #198754
       }
 
     .nav-btn {
@@ -83,6 +91,7 @@ html {
       right: auto !important;
       transform: none !important;
       width: 100%;
+      margin-top: 5px;
     }
 
     .nav-btn a:hover {
