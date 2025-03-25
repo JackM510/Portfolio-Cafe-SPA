@@ -8,7 +8,7 @@ const openingHours = {
     'Sun': 'Closed'
 };
 
-const today = new Date().toLocaleString('en-US', { weekday: 'short' });
+let today = new Date().toLocaleString('en-US', { weekday: 'short' });
 
 const todaysHours = document.getElementById('currentDayHours');
 
@@ -23,8 +23,11 @@ function showTodayHours() {
     const currentHours = document.createElement('span');
     currentHours.textContent = openingHours[today];
     currentHours.style = 'text-decoration: underline; text-underline-offset: 0.4rem;';
+    
     if (today == 'Sun'){
         todaysHours.innerHTML = 'Closed on Sundays';
+        todaysHours.style = 'text-decoration: underline; text-underline-offset: 0.4rem;';
+        todaysHours.innerHTML += ' ';
     } else {
         todaysHours.innerHTML = 'Open today ';
         todaysHours.appendChild(currentHours);
@@ -56,7 +59,6 @@ function showHoursDropdown() {
             const upIcon = document.createElement('icon');
             upIcon.classList = " bi bi-caret-up-fill";
             upSpan.appendChild(upIcon);
-            p.textContent += " ";
             p.appendChild(upSpan);
         }
     

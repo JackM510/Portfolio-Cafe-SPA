@@ -10,7 +10,7 @@
   }
 
   .contact-link:hover {
-    opacity: 0.8;
+    opacity: 0.9;
     text-decoration: underline;
     text-underline-offset: 0.4rem;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -18,7 +18,7 @@
 
   #currentDayHours:hover,
   #contactHoursDropdown:hover {
-    opacity: 0.8;
+    opacity: 0.9;
     cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
