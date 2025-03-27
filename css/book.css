@@ -6,8 +6,8 @@ textarea:focus {
 }
 
 .book-btn:hover {
-  transform: scale(1.2);
-  opacity: 0.8;
+  transform: scale(1.1);
+  opacity: 0.9;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -16,5 +16,9 @@ textarea:focus {
   #book-form input::placeholder,
   .book-btn {
     font-size: 18px !important;
+  }
+
+  #book {
+    padding-bottom: 5rem !important;
   }
 }

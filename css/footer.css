@@ -15,4 +15,8 @@
   #ig-icon i {
     font-size: 2rem !important;
   }
+  #social-heading,
+  #social-icons {
+    margin-bottom: 1.5rem !important;
+  }
 }
