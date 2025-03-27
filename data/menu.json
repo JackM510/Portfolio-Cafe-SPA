@@ -34,7 +34,7 @@
         },       
         "Drinks": {
             "COFFEE": [
-                { "name": "Torquay Roasters House Blend", "description": "bonsoy, almond, oat + $0.5, extra shot + $0.5", "price": "$5.20" },
+                { "name": "Roasters House Blend", "description": "bonsoy, almond, oat + $0.5, extra shot + $0.5", "price": "$5.20" },
                 { "name": "Iced Coffee", "description": "single shot blended w/ icecream & cream", "price": "$7.0" },
                 { "name": "Iced Latte", "description": "single shot blended w/ ice and milk", "price": "$5.50" }
             ],

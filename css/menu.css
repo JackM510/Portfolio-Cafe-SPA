@@ -1,13 +1,16 @@
-.menu-item {
-    overflow: hidden;
-  }
 
   .menu-link {
     font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+
+  .tab-content {
+    box-shadow: none !important;
   }
 
   .menu-link.active {
-    background-color: rgb(255, 255, 255);
+    background-color: #FFFFFF !important;
+    opacity: 1 !important;
   }
 
   .menu-link:hover {
@@ -20,7 +23,6 @@
       font-size: 13px !important;
     }
   }
-
 
   @media(max-width: 768px) {
     .menu-card {

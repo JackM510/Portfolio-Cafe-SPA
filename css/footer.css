@@ -9,3 +9,10 @@
     opacity: 0.8;
     transition: transform 0.3s, opacity 0.3s ease;
 }
+
+@media(max-width: 400px) {
+  #fb-icon i,
+  #ig-icon i {
+    font-size: 2rem !important;
+  }
+}
