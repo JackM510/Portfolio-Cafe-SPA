@@ -13,6 +13,20 @@ p {
   padding: 8px 15px;
 }
 
+/* Padding & Margin classes */
+.pt-5rem {
+  padding-top: 5rem !important;
+}
+
+.pb-5rem {
+  padding-bottom: 5rem !important;
+}
+
+.pb-8rem {
+  padding-bottom: 8rem !important;
+}
+
+/* Resize font-size for smaller displays */
 @media (max-width: 400px) {
   h1 {
     font-size: 24px !important;

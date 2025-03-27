@@ -11,6 +11,10 @@ textarea:focus {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+#book-form textarea {
+  resize:none;
+}
+
 @media(max-width: 400px) {
   #book-form input,
   #book-form input::placeholder,

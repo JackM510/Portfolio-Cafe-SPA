@@ -2,6 +2,7 @@
   .menu-link {
     font-weight: bold;
     letter-spacing: 0.5px;
+    margin: 0;
   }
 
   .tab-content {
