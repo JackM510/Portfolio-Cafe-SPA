@@ -1,9 +1,19 @@
+#fb-icon {
+  color:#1877F2;
+  font-size:2.5rem;
+}
+
 #fb-icon:hover {
     transform: scale(1.2);
     opacity: 0.8;
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
   
+  #ig-icon {
+    color:#e1306c;
+    font-size:2.5rem;
+  }
+
 #ig-icon:hover{
     transform: scale(1.2);
     opacity: 0.8;
