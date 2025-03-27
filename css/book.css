@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 input:focus,
 textarea:focus {
   border-color: black !important;

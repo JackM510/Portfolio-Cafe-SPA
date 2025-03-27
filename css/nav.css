@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* Navbar Styles */
 html {
     scroll-padding-top: 70px;
@@ -20,7 +22,7 @@ html {
     transform: scale(1.1);
     text-decoration: underline;
     text-underline-offset: 0.5rem;
-    text-decoration-color: #198754
+    text-decoration-color: #198754;
   }
   
   .nav-btn {

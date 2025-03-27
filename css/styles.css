@@ -1,4 +1,10 @@
+@charset "utf-8";
+
 /* Font Styles */
+nav a, h1, button {
+  font-family: 'Roboto', sans-serif;
+}
+
 
 /* Shared Styles */
 p {

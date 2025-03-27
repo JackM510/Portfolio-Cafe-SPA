@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 .gallery-img {
     object-fit: cover !important;
     height: 100%;
