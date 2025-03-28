@@ -15,8 +15,8 @@ A single-page application developed using Bootstrap 5, HTML, CSS, and JavaScript
 - **Footer:** the footer contains linked icons which allow the user to navigate to view the business social media platforms.
 
 # Installation
-Note: this application was designed to be fully functional with minimum setup. E.g., utilising Bootstrap 5 via a CDN and using the menu.json file to store the data for the dynamic menu. 
-**1.** Clone the repository.
-**2.** Run the application on your local server from 'index.php'.
+**Note:** this application was designed to be fully functional with minimum setup. E.g., utilising Bootstrap 5 via a CDN and using the menu.json file to store the data for the dynamic menu. 
+1. Clone the repository.
+2. Run the application on your local server from 'index.php'.
 
 # Usage
