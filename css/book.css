@@ -1,16 +1,22 @@
 @charset "utf-8";
 
-input:focus,
-textarea:focus {
-  border-color: black !important;
-  box-shadow: none !important;
-  outline: none;
+/* BS5 focus effect */
+#book-form input:focus,
+#book-form textarea:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
 .book-btn:hover {
   transform: scale(1.1);
   opacity: 0.9;
   transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* BS5 focus effect */
+.book-btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
 #book-form textarea {

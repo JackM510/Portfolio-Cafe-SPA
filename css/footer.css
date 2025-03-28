@@ -22,6 +22,12 @@
     transition: transform 0.3s, opacity 0.3s ease;
 }
 
+#fb-icon:focus,
+#ig-icon:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
 @media(max-width: 400px) {
   #fb-icon i,
   #ig-icon i {
