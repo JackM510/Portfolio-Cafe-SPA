@@ -27,7 +27,7 @@
   }
 
     /* BS5 focus effect */
-    .contact-link a:focus {
+    .contact-link a:focus-visible {
       outline: 0;
       box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
   }
@@ -37,7 +37,7 @@
 }
 
   /* BS5 focus effect */
-  #currentDayHours:focus {
+  #currentDayHours:focus-visible {
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
