@@ -108,4 +108,4 @@ const populateCategory = (category, containerId) => {
   
     // Append the card to the provided container
     container.appendChild(card);
-  };
+  }; 

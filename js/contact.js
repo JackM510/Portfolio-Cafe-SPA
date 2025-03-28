@@ -83,3 +83,11 @@ collapseHours.addEventListener('hide.bs.collapse', function () {
     todaysHours.style.display = 'block'; // Show the <p> tag
 });
 
+// Select the collapse trigger and the dropdown target
+const collapseTrigger = document.getElementById('currentDayHours');
+// Accessibility for currentDayHours dropdown
+collapseTrigger.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        collapseTrigger.click();
+    }
+}); 

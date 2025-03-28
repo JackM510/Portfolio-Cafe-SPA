@@ -26,13 +26,16 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
+#currentDayHours {
+  display: inline-block;
+}
+
   #currentDayHours:hover,
   #contactHoursDropdown:hover {
     opacity: 0.9;
     cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
-
 
 #contactHoursDropdown {
     position: relative;

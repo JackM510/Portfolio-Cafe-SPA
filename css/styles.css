@@ -1,15 +1,16 @@
 @charset "utf-8";
 
 /* Font Styles */
-nav a, h1, button {
-  font-family: 'Roboto', sans-serif;
-}
 
 
 /* Shared Styles */
 p {
   font-size:1.3rem;
   color: grey;
+}
+
+.letter-spacing {
+  letter-spacing: 0.5px;
 }
 
 .btn-gradient {
