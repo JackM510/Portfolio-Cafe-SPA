@@ -27,7 +27,7 @@ p {
   padding-bottom: 5rem !important;
 }
 
-/* Resize font-size for smaller displays */
+/* Resize font-size for xs displays */
 @media (max-width: 400px) {
   h1 {
     font-size: 24px !important;
