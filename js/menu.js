@@ -27,6 +27,7 @@ fetch('./data/menu.json')
 const populateCategory = (category, containerId) => {
     const container = document.getElementById(containerId);
     const items = menu[category];
+    let count = 0;
   
     if (items && container) {
       // Check if the category has subcategories (like Drinks)
@@ -36,12 +37,17 @@ const populateCategory = (category, containerId) => {
           // Create a single column for the subcategory
           const headingColumn = document.createElement("div");
           headingColumn.classList.add("col-12", "text-center", "mb-4");
-  
+          
           // Add a heading for the subcategory
           const heading = document.createElement("h4");
-          heading.classList.add("heading-underline", "mt-3", "p-3", "subcategory-heading");
+          if (count == 0) {
+            heading.classList.add("heading-underline", "mt-4", "p-3", "subcategory-heading");
+          } else {
+            heading.classList.add("heading-underline", "mt-3", "p-3", "subcategory-heading");
+          }
           heading.textContent = subcategory;
           headingColumn.appendChild(heading);
+          count += 1;
 
         // Append the subcategory column to the main container
         container.appendChild(headingColumn);

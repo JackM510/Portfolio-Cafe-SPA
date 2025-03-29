@@ -14,7 +14,8 @@
 
   .floating-span h1 {
     font-weight: 500 !important;
-    letter-spacing: 0.25px !important;
+    letter-spacing: 2px !important;
+    margin-top: -1px !important;
   }
   
   @media (max-width: 1400px) {
@@ -36,6 +37,10 @@
   }
   
   @media (max-width: 768px) {
+    .floating-span {
+      padding-left: 8px !important;
+      padding-right: 8px !important;
+    }
     .floating-span h1 {
       font-size: 2rem !important;
     }

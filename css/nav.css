@@ -61,6 +61,10 @@ html {
     .nav-a {
       width: 6rem !important;
     }
+
+    .nav-btn a {
+      padding: 8px 10px !important;
+    }
   }
   
   @media (max-width: 800px) {
