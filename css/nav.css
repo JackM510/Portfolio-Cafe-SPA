@@ -10,7 +10,7 @@ html {
   }
   
   .nav-a {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 18px;
     letter-spacing: 0.5px;
     width: 10rem;
@@ -35,7 +35,7 @@ html {
 
   .nav-btn a {
     font-size: 16px;
-
+    font-weight: 600;
     letter-spacing: 0.5px;
   }
   
