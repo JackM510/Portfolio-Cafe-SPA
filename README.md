@@ -15,11 +15,10 @@ A single-page application developed using Bootstrap 5, HTML, CSS, and JavaScript
 - **Footer:** contains linked icons to the business's social media platforms.
 
 # Installation
+**Note:** this project was created to work out of the box with minimum setup. It utilises Bootstrap 5 via a CDN and uses the 'menu.json' file to store the data for the menu instead of needing to set up a back-end database. 
 1. Clone the repository.
 2. Run the application on your local server from 'index.php'.
    
-**Note:** this project was created to work out of the box with minimum setup. It utilises Bootstrap 5 via a CDN and uses the 'menu.json' file to store the data for the menu instead of needing to set up a back-end database. 
-
 # Usage
 1. All sections are accessible using the primary navigation bar. The Navbar will collapse on smaller displays and is accessible by selecting the collapsible icon.
 2. The Navbar is sticky and will follow the user as they scroll down the page to ensure that they always have access to the Navbar.
