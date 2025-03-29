@@ -17,6 +17,7 @@ A single-page application developed using Bootstrap 5, HTML, CSS, and JavaScript
 # Installation
 1. Clone the repository.
 2. Run the application on your local server from 'index.php'.
+   
 **Note:** this project was created to work out of the box with minimum setup. It utilises Bootstrap 5 via a CDN and uses the 'menu.json' file to store the data for the menu instead of needing to set up a back-end database. 
 
 # Usage
