@@ -1,6 +1,7 @@
 @charset "utf-8";
   
   .menu-link {
+    font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.25px;
     margin: 0;
@@ -20,9 +21,15 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 576px) {
     .menu-link {
-      font-size: 13px !important;
+      font-size: 16px !important;
+    }
+  }
+
+  @media (max-width: 374px) {
+    .menu-link {
+      font-size: 14px !important;
     }
   }
 
