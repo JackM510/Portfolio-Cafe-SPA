@@ -12,6 +12,7 @@
   }
 
   .floating-span h1 {
+    font-weight: 500 !important;
     letter-spacing: 0.5px !important;
   }
   
@@ -69,12 +70,6 @@
 
 .landingImgFade {
   animation: landingFadeIn 3s forwards;
-}
-
-@media (max-width: 350px) {
-  #landing-span h1 {
-    font-size: 25px !important;
-  }
 }
 
 @media (min-width: 1400px){
