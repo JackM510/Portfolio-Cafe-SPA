@@ -1,6 +1,9 @@
 # Portfolio-Cafe-SPA
 
-A single-page application developed using Bootstrap 5, HTML, CSS, and JavaScript, designed for the fictional cafe business 'Aroma Espresso'. This project was created as a portfolio piece to showcase a responsive and fully functional website utilising Bootstrap, CSS, and Javascript. The site was designed to provide essential information about the business and features an interactive photo gallery and menu to highlight the venue and offerings, including contact details and location, and allows users to book directly through the website.  
+A single-page application developed using Bootstrap 5, HTML, CSS, and JavaScript, designed for the fictional cafe business 'Aroma Espresso'. This project was created as a portfolio piece to showcase a responsive and fully functional website utilising Bootstrap, CSS, and Javascript. The site was designed to provide essential information about the business and features an interactive photo gallery and menu to highlight the venue and offerings, including contact details and location, and allows users to book directly through the website.
+
+# Screenshots
+- The project includes a 'screenshot' directory with images of the application, allowing for easy viewing without the need to clone or download the repository.
 
 # Features
 - **Responsive Design:** designed to work across multiple devices and browsers utilising CSS media queries and Javascript.
