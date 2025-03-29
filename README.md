@@ -19,3 +19,15 @@ A single-page application developed using Bootstrap 5, HTML, CSS, and JavaScript
 2. Run the application on your local server from 'index.php'.
 **Note:** this project was created to work out of the box with minimum setup. It utilises Bootstrap 5 via a CDN and uses the 'menu.json' file to store the data for the menu instead of needing to set up a back-end database. 
 
+# Usage
+1. All sections are accessible using the primary navigation bar. The Navbar will collapse on smaller displays and is accessible by selecting the collapsible icon.
+2. The Navbar is sticky and will follow the user as they scroll down the page to ensure that they always have access to the Navbar.
+3. Images in the gallery are hoverable and can be clicked to display a modal. The user can select the '<' and '>' icons to view the previous and next images in the gallery. There is also an 'X' icon to close the modal in the top-right corner.
+4. The 'Breakfast', 'Lunch' and 'Drinks' menu tabs in the menu section can be selected to view the tab pane of menu items for each respective section.
+5. The location, email, and phone number in the contact section are all hoverable links and will direct the user to a respective application when selected.
+6. The input and button elements in the booking section are interactive. To make a booking, a valid name, 10-digit phone number, number of people between 1-10, and DAT are required. The date must be within 1 month of today's date and the time must be during the business operating hours and at least 1 hour before closing.
+
+# Accessibility
+- Elements in the Navbar, Contact, Book A Table, and Footer sections can be focused by pressing the 'tab' key and selected by pressing the 'enter' key. To navigate to the previous focusable element press 'shift' + 'tab'.
+- Images in the photo gallery can be focused by pressing the 'tab' key and selected by pressing the 'enter' key. To navigate to the previous focusable element press 'shift' + 'tab'. If an image is selected, a modal will be visible and the user can press the 'left arrow' and 'right arrow' keys to view the next and previous images in the gallery. The 'esc' key can be used to close the modal.
+- The first menu tab in the menu section ('Breakfast') can be focused using the 'tab' key, however, the user must use the 'left arrow' and 'right arrow' keys to move between the menu tabs. If 'tab' is used when the 'Breakfast' tab is focused, it will move to the next focusable element in the contact section.
