@@ -5,6 +5,7 @@
 }
 
 .floating-span {
+    background-color: rgb(255, 255, 255, 0.9) !important;
     position: absolute;
     top: 50%;
     left: 2%;
@@ -13,7 +14,7 @@
 
   .floating-span h1 {
     font-weight: 500 !important;
-    letter-spacing: 0.5px !important;
+    letter-spacing: 0.25px !important;
   }
   
   @media (max-width: 1400px) {

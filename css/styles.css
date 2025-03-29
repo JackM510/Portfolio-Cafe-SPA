@@ -9,8 +9,9 @@ p {
   color: grey;
 }
 
-.letter-spacing {
-  letter-spacing: 0.5px;
+.subheading {
+  font-weight: 500;
+  letter-spacing: 0.25px;
 }
 
 .btn-gradient {
