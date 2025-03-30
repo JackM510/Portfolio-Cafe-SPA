@@ -1,8 +1,9 @@
 // Wait for the page to load
 window.addEventListener('load', function() {
-    const spanElement = document.getElementById('landing-span');
-    spanElement.classList.add('landingSpanFade');
-
-    const spanElement2 = document.getElementById('landing-img');
-    spanElement2.classList.add('landingImgFade');
+    // Add fade to the landing-span
+    const landingSpan = document.getElementById('landing-span');
+    landingSpan.classList.add('span-fade');
+    // Add fade to the landing-img
+    const landingImg = document.getElementById('landing-img');
+    landingImg.classList.add('img-fade');
 });
