@@ -7,7 +7,7 @@
   height: calc(50vh - 70px);
 }
 
-.floating-span {
+#landing-span {
     background-color: rgb(255, 255, 255, 0.9);
     position: absolute;
     top: 50%;
@@ -17,7 +17,7 @@
     padding: 4px 4px;
 }
 
-.floating-span h1 {
+#landing-title {
   font-size: 2rem;
   font-weight: 500;
   letter-spacing: 2px;
@@ -43,7 +43,7 @@
   
 /* Small screens (>576px) */ 
 @media (min-width: 576px) {
-  .floating-span {
+  #landing-span {
     padding: 4px 8px;
   }
 }
@@ -54,7 +54,7 @@
     height: calc(60vh - 70px);
   }
 
-  .floating-span h1 {
+  #landing-title {
     font-size: 2.5rem;
   } 
 }
@@ -65,14 +65,14 @@
     height: calc(70vh - 70px);
   }
 
-  .floating-span h1 {
+  #landing-title {
     font-size: 3rem;
   }
 }
 
 /* XL screens (≥1200px) */
 @media (min-width: 1200px) {
-  .floating-span h1 {
+  #landing-title {
       font-size: 3.5rem;
   }
 }
@@ -82,7 +82,7 @@
   #landing-img {
     height: calc(100vh - 70px);
   }
-  .floating-span h1 {
+  #landing-title {
       font-size: 5rem;
   }
 }
