@@ -15,7 +15,7 @@
     transform: translateY(-50%);
     white-space: nowrap;
     padding: 4px 4px;
-  }
+}
 
 .floating-span h1 {
   font-size: 2rem;
@@ -27,7 +27,7 @@
 @keyframes landing-fade-in {
   from {
       opacity: 0;
-  }
+  } 
   to {
       opacity: 1;
   }
@@ -44,8 +44,7 @@
 /* Small screens (>576px) */ 
 @media (min-width: 576px) {
   .floating-span {
-    padding-left: 8px !important;
-    padding-right: 8px !important;
+    padding: 4px 8px;
   }
 }
 
@@ -56,7 +55,7 @@
   }
 
   .floating-span h1 {
-    font-size: 2.5rem !important;
+    font-size: 2.5rem;
   } 
 }
 
@@ -67,14 +66,14 @@
   }
 
   .floating-span h1 {
-    font-size: 3rem !important;
+    font-size: 3rem;
   }
 }
 
 /* XL screens (≥1200px) */
 @media (min-width: 1200px) {
   .floating-span h1 {
-      font-size: 3.5rem !important;
+      font-size: 3.5rem;
   }
 }
 
@@ -84,6 +83,6 @@
     height: calc(100vh - 70px);
   }
   .floating-span h1 {
-      font-size: 5rem !important;
+      font-size: 5rem;
   }
 }
