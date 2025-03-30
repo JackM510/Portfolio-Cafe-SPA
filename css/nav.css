@@ -14,8 +14,7 @@ nav {
   align-items: center;
   text-align: center;
   margin-top: 5px;
-  padding-top: 4px;
-  padding-bottom: 8px;
+  padding: 4px 0 8px;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175); /* BS5 shadow-lg */
 }
 
@@ -63,13 +62,15 @@ nav {
 
 /* Medium screens (>768px) */
 @media (min-width: 768px) {
+  nav {
+    padding: 0px 0px !important;
+  }
 
   #collapsible-navbar {
-    min-height: 70px;
+    height: 100%;
     flex-direction: row;
     margin-top: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0px;
   }
 
   .nav-a {
