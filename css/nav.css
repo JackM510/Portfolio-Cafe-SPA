@@ -33,7 +33,7 @@ nav {
   text-decoration-color: #198754;
 }
 
-.nav-book {
+#nav-book {
   position: relative;
   display: inline-block;
   top: auto;
@@ -81,7 +81,7 @@ nav {
     transform: scale(1.1);
   }
 
-  .nav-book {
+  #nav-book {
     position: absolute !important; 
     right: 10px; 
     top: 50%; 
