@@ -6,9 +6,18 @@ p {
   color: grey;
 }
 
+.subheading-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 .subheading {
   font-weight: 500;
   letter-spacing: 0.25px;
+  background-color: #212529;
+  color: #fff;
+  padding: 4px 16px;
 }
 
 .btn-gradient {
