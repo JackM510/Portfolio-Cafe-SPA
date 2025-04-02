@@ -20,6 +20,14 @@ p {
   padding: 4px 16px;
 }
 
+.heading-underline {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
 .btn-gradient {
   background: linear-gradient(to bottom, #198754 90%, #145a32 90%);
   color: white;

@@ -1,14 +1,43 @@
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+/* Default styles for XS screens - p5 for text on large screens */ 
+/*
+#about h3 {
+      margin-bottom: 1.5rem; mb-4
+}
 
-.heading-underline {
-    display: inline-block;
-    position: relative;
-    margin: 0 auto;
-    padding-bottom: 16px;
-    border-bottom: 1px solid #ddd;
+.about-txt {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      padding-bottom: 1.5rem ;
+    }
+    
+#about-ingredients-txt {
+  margin-top: 0;
+}
+  
+@media (min-wdith: 768px) {
+  .about-text {
+    padding: 2rem;
+  }  
+
+  #about-ingredients,
+  #about-location {
+      margin-top: 0 !important;
   }
   
-  @media (max-width: 992px) {
+  #about-location-txt {
+    padding-top: 0 !important;
+  }
+}
+*/
+
+/* col adapts at 992px - min width should be 786px*/
+@media (max-width: 992px) {
     #about-ingredients,
     #about-location {
       margin-top: 0 !important;
@@ -19,6 +48,7 @@
     }
   }
   
+  /* min-width 568px */
   @media (max-width: 768px) {
 
     #about h3 {
