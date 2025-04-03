@@ -130,52 +130,51 @@
     </section>
 
     <!-- Gallery Section -->
-    <section class="container-fluid pt-5rem" id="gallery">
+    <section id="gallery" class="container-fluid pt-5rem" aria-labelledby="gallery-heading">
         <div class="container">
             <div class="subheading-container">
-                <h1 class="display-6 subheading">PHOTO GALLERY</h1>
+                <h1 id="gallery-heading" class="display-6 subheading">PHOTO GALLERY</h1>
             </div>
             <div class="row mt-5">
-                <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center p-1">
-                    <img class="img-fluid gallery-img" src="img/gallery/gal-1.jpg" alt="Blueberry Waffles with nuts and berry puree" tabindex="0" aria-label="Click to expand image 1" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-index="0">
+                <div class="col-6 col-sm-4 gallery-img-container">
+                    <img class="gallery-img" src="img/gallery/gal-1.jpg" alt="Blueberry Waffles with nuts and berry puree" tabindex="0" aria-label="Expand image 1" data-bs-toggle="modal" data-bs-target="#gallery-modal" data-bs-index="1" loading="lazy">
                 </div>
-                <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center p-1">
-                    <img class="img-fluid gallery-img" src="img/gallery/gal-2.jpg" alt="Gold Oats stacked with seasonal fruit" tabindex="0" aria-label="Click to expand image 2" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-index="0">
+                <div class="col-6 col-sm-4 gallery-img-container">
+                    <img class="gallery-img" src="img/gallery/gal-2.jpg" alt="Gold Oats stacked with seasonal fruit" tabindex="0" aria-label="Expand image 2" data-bs-toggle="modal" data-bs-target="#gallery-modal" data-bs-index="2" loading="lazy">
                 </div>
-                <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center p-1">
-                    <img class="img-fluid gallery-img" src="img/gallery/gal-3.jpg" alt="Chocolate & Honeycomb Waffles" tabindex="0" aria-label="Click to expand image 3" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-index="0">
+                <div class="col-6 col-sm-4 gallery-img-container">
+                    <img class="gallery-img" src="img/gallery/gal-3.jpg" alt="Chocolate & Honeycomb Waffles" tabindex="0" aria-label="Expand image 3" data-bs-toggle="modal" data-bs-target="#gallery-modal" data-bs-index="3" loading="lazy">
                 </div>
-                <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center p-1">
-                    <img class="img-fluid gallery-img" src="img/gallery/gal-4.jpg" alt="A barista pouring milk into a coffee" tabindex="0" aria-label="Click to expand image 4" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-index="0">
+                <div class="col-6 col-sm-4 gallery-img-container">
+                    <img class="gallery-img" src="img/gallery/gal-4.jpg" alt="A barista pouring milk into a coffee" tabindex="0" aria-label="Expand image 4" data-bs-toggle="modal" data-bs-target="#gallery-modal" data-bs-index="4" loading="lazy">
                 </div>
-                <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center p-1">
-                    <img class="img-fluid gallery-img" src="img/gallery/gal-5.jpg" alt="Matcha Pancakes with berries" tabindex="0" aria-label="Click to expand image 5" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-index="0">
+                <div class="col-6 col-sm-4 gallery-img-container">
+                    <img class="gallery-img" src="img/gallery/gal-5.jpg" alt="Matcha Pancakes with berries" tabindex="0" aria-label="Expand image 5" data-bs-toggle="modal" data-bs-target="#gallery-modal" data-bs-index="5" loading="lazy">
                 </div>
-                <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center p-1">
-                    <img class="img-fluid gallery-img" src="img/gallery/gal-6.jpg" alt="Panna cotta with granola and berries" tabindex="0" aria-label="Click to expand image 6"data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-index="0">
+                <div class="col-6 col-sm-4 gallery-img-container">
+                    <img class="gallery-img" src="img/gallery/gal-6.jpg" alt="Panna cotta with granola and berries" tabindex="0" aria-label="Expand image 6" data-bs-toggle="modal" data-bs-target="#gallery-modal" data-bs-index="6" loading="lazy">
                 </div>
             </div>
         </div>
 
         <!-- Modal -->
-        <div class="modal fade justify-content-center align-items-center m-0" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel">
+        <div id="gallery-modal" class="modal fade" aria-labelledby="gallery-modal-title" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered modal-fullscreen">
-                <div class="modal-content border-0">
-                    <div class="modal-header border-0 pb-0">
-                        <p class="modal-title text-white" id="modalTitle"></p>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div id="gallery-modal-content" class="modal-content">
+                    <div id="gallery-modal-header" class="modal-header">
+                        <p id="gallery-modal-title" class="modal-title"></p>
+                        <button id="gallery-btn-close" class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body d-flex text-center pt-0 pb-0">
-                        <button class="carousel-control-prev" id="prevImage" aria-label="Previous Image">
+                    <div id="gallery-modal-body" class="modal-body">
+                        <button id="gallery-prev-img" class="carousel-control-prev" aria-label="Previous Image">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
-                        <img id="modalImage" class="img-fluid" src="" alt="Expanded Image">
-                        <button class="carousel-control-next" id="nextImage" aria-label="Next Image">
-                            <span class="carousel-control-next-icon text-white"></span>
+                        <img id="gallery-modal-img" src="" alt="Expanded Image">
+                        <button id="gallery-next-img" class="carousel-control-next" aria-label="Next Image">
+                            <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
-                    <div class="modal-footer border-0">
-                    </div>                  
+                    <div id="gallery-modal-footer" class="modal-footer"></div>                  
                 </div>
             </div>
         </div>
