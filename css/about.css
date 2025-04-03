@@ -4,74 +4,49 @@
   object-fit: cover;
 }
 
-/* Default styles for XS screens - p5 for text on large screens */ 
-/*
+/* Default styles for XS screens */
 #about h3 {
-      margin-bottom: 1.5rem; mb-4
+  margin-bottom: 1.5rem; /* mb-4 */
 }
 
-.about-txt {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-      padding-bottom: 1.5rem ;
-    }
-    
+#about-coffee-txt,
+#about-ingredients-txt,
+#about-location-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#about-coffee-txt,
 #about-ingredients-txt {
-  margin-top: 0;
+  padding: 3rem 0.5rem 1.5rem 0.5rem;
 }
-  
-@media (min-wdith: 768px) {
-  .about-text {
-    padding: 2rem;
-  }  
 
-  #about-ingredients,
+#about-location-txt {
+  padding: 0rem 0.5rem 1.5rem 0.5rem;
+}
+
+/* Medium screens (>768px) */
+@media (min-width: 992px) {
+  #about h3 {
+    margin-bottom: 3rem;
+  }
+
+  #about-coffee-txt {
+    padding: 3rem 3rem 0rem 3rem;
+  }
+
+  #about-ingredients {
+    margin-top: 2rem;
+  }
+
   #about-location {
-      margin-top: 0 !important;
+    margin-top: 3rem;
   }
-  
+
+  #about-ingredients-txt,
   #about-location-txt {
-    padding-top: 0 !important;
+    padding: 3rem;
   }
 }
-*/
-
-/* col adapts at 992px - min width should be 786px*/
-@media (max-width: 992px) {
-    #about-ingredients,
-    #about-location {
-      margin-top: 0 !important;
-    }
-  
-    #about-location-txt {
-      padding-top: 0 !important;
-    }
-  }
-  
-  /* min-width 568px */
-  @media (max-width: 768px) {
-
-    #about h3 {
-      margin-bottom: 1.5rem !important; /* mb-4 */
-    }
-
-    #about-coffee-txt {
-      padding-left: 0.5rem !important;
-      padding-right: 0.5rem !important;
-      padding-bottom: 1.5rem !important;
-    }
-    
-    #about-ingredients-txt {
-      padding-left: 0.5rem !important;
-      padding-right: 0.5rem !important;
-      padding-bottom: 1.5rem !important;
-      margin-top: 0 !important;
-
-    }
-    
-    #about-location-txt {
-      padding-left: 0.5rem !important;
-      padding-right: 0.5rem !important;
-      padding-bottom: 1.5rem !important;
-    }
-  }
