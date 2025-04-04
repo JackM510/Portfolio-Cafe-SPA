@@ -181,37 +181,37 @@
     </section>
 
     <!-- Menu Section -->
-    <section class="container-fluid pt-5rem pb-5rem" id="menu">
+    <section id="menu" class="container-fluid pt-5rem pb-5rem" aria-labelledby="menu-heading">
         <div class="container px-0">
             <div class="subheading-container">
-                <h1 class="display-6 subheading">MENU</h1>
+                <h1 id="menu-heading" class="display-6 subheading">MENU</h1>
             </div>
-            <div class="mt-5 border d-flex flex-column justify-content-center m-auto" id="menu-container">
+            <div id="menu-container">
                 <!-- Menu Tabs -->
-                <ul class="nav nav-tabs nav-justified justify-content-center bg-light border-0">
-                    <li class="nav-item menu-item text-center">
-                        <a class="nav-link menu-link text-dark rounded-0 border-0 py-3 w-100" data-bs-toggle="tab" href="#tab1">BREAKFAST</a>
+                <ul class="nav nav-tabs nav-justified justify-content-center bg-light border-0" role="tablist">
+                    <li class="nav-item menu-item">
+                        <a id="menu-link-breakfast" class="nav-link menu-link" href="#menu-tab-breakfast" data-bs-toggle="tab" role="tab">BREAKFAST</a>
                     </li>
                     <li class="nav-item menu-item">
-                        <a class="nav-link menu-link text-dark rounded-0 border-0 py-3" data-bs-toggle="tab" href="#tab2">LUNCH</a>
+                        <a id="menu-link-lunch" class="nav-link menu-link" href="#menu-tab-lunch" data-bs-toggle="tab" role="tab">LUNCH</a>
                     </li>
                     <li class="nav-item menu-item">
-                        <a class="nav-link menu-link text-dark rounded-0 border-0 py-3" data-bs-toggle="tab" href="#tab3">DRINKS</a>
+                        <a id="menu-link-drinks" class="nav-link menu-link" href="#menu-tab-drinks" data-bs-toggle="tab" role="tab">DRINKS</a>
                     </li>
                 </ul>
                 <!-- Tab Panes -->
                 <div class="tab-content shadow pb-3">
                     <!-- Breakfast -->
-                    <div class="tab-pane container fade" id="tab1">
-                        <div class="row" id="menu-breakfast"></div>
+                    <div id="menu-tab-breakfast" class="tab-pane container fade" role="tabpanel" aria-labelledby="menu-link-breakfast">
+                        <div id="menu-container-breakfast" class="row"></div>
                     </div>
                     <!-- Lunch -->
-                    <div class="tab-pane container fade" id="tab2">
-                        <div class="row" id="menu-lunch"></div>
+                    <div id="menu-tab-lunch" class="tab-pane container fade" role="tabpanel" aria-labelledby="menu-link-lunch">
+                        <div id="menu-container-lunch" class="row"></div>
                     </div>
                     <!-- Drinks -->
-                    <div class="tab-pane container fade" id="tab3">
-                        <div class="row" id="menu-drinks"></div>
+                    <div id="menu-tab-drinks" class="tab-pane container fade" role="tabpanel" aria-labelledby="menu-link-drinks">
+                        <div id="menu-container-drinks" class="row"></div>
                     </div>
                 </div>
             </div>

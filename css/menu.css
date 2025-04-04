@@ -1,74 +1,92 @@
 @charset "utf-8";
-  
-  .menu-link {
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 0.25px;
-    margin: 0;
-  }
 
-  .tab-content {
-    box-shadow: none !important;
-  }
-
-  .menu-link.active {
-    background-color: #FFFFFF !important;
-    opacity: 1 !important;
-  }
-
-  .menu-link:hover {
-    opacity: 0.8;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-
-  @media (max-width: 576px) {
-    .menu-link {
-      font-size: 16px !important;
-    }
-  }
-
-  @media (max-width: 374px) {
-    .menu-link {
-      font-size: 14px !important;
-    }
-  }
-
-  @media(max-width: 768px) {
-    .menu-card {
-      padding-left: 16px !important;
-      padding-right: 16px !important;
-    }
-    
-    .menu-badge {
-      margin-top: 5px !important;
-      margin-left: 0 !important;
-    }
-  }
-
-  #menu-container {
-    width: 75% !important;
+/* Default styles for XS screens */ 
+#menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  margin-top: 3rem; /* BS5 mt-5 */
+  border: 1px solid #dee2e6; /* Default BS5 border */
 }
 
-@media (max-width: 992px) {
-  #menu-container {
-      width: 100% !important;
-  }
+.menu-item {
+  text-align: center;
 }
 
-.menu-badge {
-  margin: 0 !important;
+.menu-link {
+  font-size: 14px; /* Default font size for XXS screens 320px */
+  font-weight: 700;
+  letter-spacing: 0.25px;
+  color: #212529 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 1rem;
+  margin: 0;
+}
+
+.menu-link.active {
+  background-color: #FFF;
+  opacity: 1;
+}
+
+.menu-link:hover {
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.tab-content {
+  box-shadow: none !important;
+}
+
+.subcategory-heading {
+  padding: 1rem;
+}
+
+.menu-card {
+  border: none;
+  border-radius: 0;
+}
+
+.diet-badge {
+  color: grey;
+  letter-spacing: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .menu-price {
-  display: inline-block !important;
-  margin: 0 auto !important;
+  display: inline-block;
   vertical-align: middle;
   line-height: normal;
+  margin: 0 auto;
 }
 
-.diet-span {
-  color: grey;
-  letter-spacing: 1px;
-  padding-left: 5px !important;
-  padding-right: 5px !important;
+/* XS screens (>375px) */
+@media (min-width: 375px) {
+  .menu-link {
+    font-size: 16px;
+  }
+}
+
+/* Small screens (>576px) */
+@media (min-width: 576px) {
+  .menu-link {
+    font-size: 18px;
+  }
+}
+
+/* Medium screens (>768px) */
+@media(min-width: 768px) {
+  .menu-card {
+    padding: 0 3rem;
+  }
+}
+
+/* Large screens (>992px) */
+@media(min-width: 992px) {
+  #menu-container {
+    width: 75%;
+  }
 }
