@@ -1,93 +1,92 @@
-const openingHours = {
-    'Mon': '7:00 AM - 3:00 PM',
-    'Tue': '7:00 AM - 3:00 PM',
-    'Wed': '7:00 AM - 3:00 PM',
-    'Thu': '7:00 AM - 3:00 PM',
-    'Fri': '7:00 AM - 3:00 PM',
-    'Sat': '8:00 AM - 3:00 PM',
-    'Sun': 'Closed'
-};
+let openingHours = {}; // Stores the opening hours for Aroma Espresso
+let today = new Date().toLocaleString('en-US', { weekday: 'short' }); // Get the current day using short format
+const todaysHours = document.getElementById('contact-todays-hours');
+const collapseHours = document.getElementById('contact-collapse-hours');
 
-let today = new Date().toLocaleString('en-US', { weekday: 'short' });
+// Fetch the JSON file
+fetch('./data/hours.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Failed to fetch JSON: ${response.status}`);
+        }
+        return response.json(); // Parse the JSON file
+    })
+    .then(data => {
+        openingHours = data.Hours; // Access the 'Hours' object from menu.json
+        showTodayHours();
+        showHoursDropdown();
+    })
+    .catch(error => console.error('Failed to load opening hours:', error));
 
-const todaysHours = document.getElementById('currentDayHours');
+// Create the upwards and downwards caret icons
+function createCaretIcon(direction) {
+    const caretSpan = document.createElement('span');
+    const caretIcon = document.createElement('icon');
+    caretIcon.classList = direction === 'down' ? 'bi bi-caret-down-fill contact-hours-caret' : 'bi bi-caret-up-fill contact-hours-caret';
+    caretSpan.appendChild(caretIcon);
+    return caretSpan;
+}
 
-// Display todays open hours on collapse
+// Display todays opening hours when the dropdown is collapsed
 function showTodayHours() {
-
-    const downSpan = document.createElement('span');
-    const downIcon = document.createElement('icon');
-    downIcon.classList = "bi bi-caret-down-fill";
-    downSpan.appendChild(downIcon);
-
-    const currentHours = document.createElement('span');
-    currentHours.textContent = openingHours[today];
-    currentHours.style = 'text-decoration: underline; text-underline-offset: 0.4rem;';
+    // Create a span which displays todays current hours
+    const hoursSpan = document.createElement('span');
+    hoursSpan.textContent = openingHours[today]; // Add todays hours as the textContent
+    hoursSpan.classList.add('contact-hours-underline'); // Apply an underline style
     
-    if (today == 'Sun'){
-        todaysHours.innerHTML = 'Closed on Sundays';
-        todaysHours.style = 'text-decoration: underline; text-underline-offset: 0.4rem;';
-        todaysHours.innerHTML += ' ';
+    // Conditional check for Sundays as the business is closed
+    if (today === 'Sun'){
+        todaysHours.textContent = 'Closed on Sundays';
+        todaysHours.classList.add('contact-hours-underline');
     } else {
-        todaysHours.innerHTML = 'Open today ';
-        todaysHours.appendChild(currentHours);
-        todaysHours.innerHTML += ' ';
+        todaysHours.textContent = 'Open today ';
+        todaysHours.appendChild(hoursSpan);
     }
 
-    todaysHours.appendChild(downSpan);   
+    // Create the downwards caret icon
+    const downSpan = createCaretIcon('down');
+    todaysHours.appendChild(downSpan); // Append the downwards caret icon to contact-todays-hours
 }
-document.addEventListener('DOMContentLoaded', showTodayHours);
 
-// Display open hours in a dropdown
+// Display weekly opening hours when the dropdown is expanded
 function showHoursDropdown() {
-    let count = 0;
-
+    // Display each days opening hours
     for (const day in openingHours) {
-        const p = document.createElement('p');
+        const p = document.createElement('p'); // Create a <p> tag for each day
+        p.textContent = `${day}: ${openingHours[day]}`; // Append each day and opening hours as the textContent
+        
+        // Display today as bold text
         if (day === today) {
-            const strong = document.createElement('strong');
-            strong.textContent = `${day}: ${openingHours[day]}`;
-            p.classList = 'text-dark';
-            p.appendChild(strong);
-        } else {
-            p.textContent = `${day}: ${openingHours[day]}`;
+            p.classList.add('contact-day-bold');
+        } 
+        
+        // If the day is monday display the upwards caret icon
+        if (day === 'Mon') {
+            p.id = 'contact-hours-monday';
+            const upSpan = createCaretIcon('up');
+            p.appendChild(upSpan); // Append the upwards caret icon next to mondays hours
         }
-
-        if (count == 0) {
-            p.id = 'contactHoursDropdown';
-            const upSpan = document.createElement('span');
-            const upIcon = document.createElement('icon');
-            upIcon.classList = " bi bi-caret-up-fill";
-            upSpan.appendChild(upIcon);
-            p.appendChild(upSpan);
-        }
-    
-
+        
+        // Append each <p> element to contact-collapse-hours
         collapseHours.appendChild(p);
-        count++;
-    }
-
-    
-    
+    }   
 }
 
-document.addEventListener('DOMContentLoaded', showHoursDropdown);
-
-// Event listener for when the dropdown is shown
+// Hide todays hours when the dropdown is expanded
 collapseHours.addEventListener('show.bs.collapse', function () {
-    todaysHours.style.display = 'none'; // Hide the <p> tag
+    todaysHours.style.display = 'none';
+    todaysHours.setAttribute('aria-expanded', 'false');
 });
 
-// Event listener for when the dropdown is hidden (collapsed)
+// Display todays hours when the dropdown is collapsed
 collapseHours.addEventListener('hide.bs.collapse', function () {
-    todaysHours.style.display = 'block'; // Show the <p> tag
+    todaysHours.style.display = 'inline-block';
+    todaysHours.setAttribute('aria-expanded', 'true');
 });
 
-// Select the collapse trigger and the dropdown target
-const collapseTrigger = document.getElementById('currentDayHours');
-// Accessibility for currentDayHours dropdown
-collapseTrigger.addEventListener('keydown', (event) => {
+// Keyboard accessibility for contact-todays-hours dropdown
+todaysHours.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
-        collapseTrigger.click();
+        todaysHours.click();
     }
-}); 
+});

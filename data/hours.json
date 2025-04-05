@@ -1,0 +1,11 @@
+{
+    "Hours": {
+        "Mon": "7:00 AM - 3:00 PM",
+        "Tue": "7:00 AM - 3:00 PM",
+        "Wed": "7:00 AM - 3:00 PM",
+        "Thu": "7:00 AM - 3:00 PM",
+        "Fri": "7:00 AM - 3:00 PM",
+        "Sat": "8:00 AM - 3:00 PM",
+        "Sun": "Closed"
+    }
+}

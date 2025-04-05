@@ -219,44 +219,40 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" aria-labelledby="contact-heading">
         <!-- Contact Map -->
-        <div class="d-flex mb-2">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6259.33958315559!2d144.32235564267785!3d-38.333476862322144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1739571371510!5m2!1sen!2sau"
-                allowfullscreen="" loading="lazy"
-                title="Location Map of the Cafe"></iframe>
+        <div id="contact-map-container">
+            <iframe id="contact-map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6259.33958315559!2d144.32235564267785!3d-38.333476862322144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1739571371510!5m2!1sen!2sau"
+                loading="lazy" aria-label="Interactive map showing cafe location">
+            </iframe>
         </div>
         <div class="container mt-5">
             <div class="subheading-container mb-5">
-                <h1 class="display-6 subheading">CONTACT US</h1>
+                <h1 id="contact-heading" class="display-6 subheading">CONTACT US</h1>
             </div>
-            <div class="text-center">
-                <h2 class="text-center">Aroma Espresso</h2>
-                <hr class="contact-hr w-50 m-auto pb-4">
+            <!-- Contact Details -->
+            <div id="contact-details-container">
+                <h2>Aroma Espresso</h2>
+                <hr class="contact-hr">
                 <ul class="list-unstyled">
-                    <li class="mb-4 contact-link">
-                        <a href="https://www.google.com/maps/place/35+The+Esplanade,+Torquay,+VIC+3228">35 The Esplanade, Torquay VIC 3228, Australia</a>
+                    <li class="mb-4">
+                        <a class="contact-link" href="https://www.google.com/maps/place/35+The+Esplanade,+Torquay,+VIC+3228" aria-label="Open location in Google Maps">35 The Esplanade, Torquay VIC 3228, Australia</a>
                     </li>
-                    <li class="mb-4 contact-link">
-                        <a href="mailto:enquiries@cafe-aroma.com">enquiries@placeholder.com</a>
+                    <li class="mb-4">
+                        <a class="contact-link" href="mailto:enquiries@cafe-aroma.com" aria-label="Send an email to enquiries@placeholder.com">enquiries@placeholder.com</a>
                     </li>
-                    <li class="contact-link">
-                        <a href="tel:+61352959955">(03)
-                            5295
-                            9955</a>
+                    <li>
+                        <a class="contact-link" href="tel:+61352959955" aria-label="Call us at (03) 5295 9955">(03) 5295 9955</a>
                     </li>
                 </ul>
             </div>
-            <div class="container mt-5">
-                <h2 class="text-center">Hours</h2>
-                <hr class="contact-hr w-50 m-auto pb-4">
-                <div class="text-center">
-                    <div class="collapse-header" data-bs-toggle="collapse" data-bs-target="#collapseHours"
-                        aria-expanded="false" aria-controls="collapseHours" role="button">
-                        <p id="currentDayHours" tabindex="0"></p>
-                        <div class="collapse" id="collapseHours">
-                        </div>
+            <!-- Contact Hours -->
+            <div id="contact-hours-container">
+                <h2>Hours</h2>
+                <hr class="contact-hr">
+                <div id="contact-collapse-header" class="collapse-header" data-bs-toggle="collapse" data-bs-target="#contact-collapse-hours" aria-expanded="false" aria-controls="contact-collapse-hours" aria-label="Expand to view weekly hours" role="button">
+                    <p id="contact-todays-hours" tabindex="0">Loading today's hours...</p>
+                    <div id="contact-collapse-hours" class="collapse" aria-hidden="true">
                     </div>
                 </div>
             </div>
