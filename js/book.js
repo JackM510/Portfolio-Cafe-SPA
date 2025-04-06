@@ -1,89 +1,145 @@
-// Book a Table Button
-function bookingForm() {
+// Process the book-form input data
+function bookingForm(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+    // Fetch the JSON file
+    fetch('./data/hours.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Failed to fetch JSON: ${response.status}`);
+        }
+        return response.json(); // Parse the JSON file
+    })
+    .then(data => {
+        const openingHours = data.Hours; // Access the 'Hours' object from menu.json
+        validateInput(openingHours); // Validate the input user input in book-form
+    })
+    .catch(error => console.error('Failed to load opening hours:', error));
+}
 
+function validateInput(openHours) {
     const name = document.getElementById('name-input').value.trim();
     const phone = document.getElementById('phone-input').value.trim();
     const dateTime = document.getElementById('dateTime-input').value.trim();
     const numPeople = document.getElementById('people-input').value.trim();
-    const message = document.getElementById('message-input').value.trim();
+    const phonePattern = /^[0-9]{10}$/; // Phone number pattern must uses numbers 0-9 and be 10 digits
+    const numPattern = /^(10|[1-9])$/; // Number of people must use numbers 0-9 and be between 1-10
 
-    // Validate Name
+    // Conditional checks for input
     if (name === "") {
-        alert("Name is required.");
+        alert("A name is required.");
         return
-    }
-
-    // Validate Phone Number
-    const phonePattern = /^[0-9]{10}$/;
-    if (!phonePattern.test(phone)) {
+    } else if (!phonePattern.test(phone)) {
         alert("Please enter a valid 10-digit phone number.");
         return;
-    }
-
-    // Validate Date and Time
-    if (dateTime === "") {
-        alert("Date and Time are required.");
+    } else if (!numPattern.test(numPeople)) {
+        alert("Please enter a number of people between 1 and 10.");
         return;
-    }
-
-    // Check if booking date within stores operational hours
-    if (!isBookingAllowed(dateTime)) {
+    } else if (dateTime === "") {
+        alert("A Date and Time are required.");
         return;
-    }
-
-    // Validate Number of People
-    const numPattern = /^(10|[1-9])$/; // Matches numbers 1-10
-    if (!numPattern.test(numPeople)) {
-        alert("Please enter a number between 1 and 10.");
+    } else if (!validateDAT(dateTime, openHours)) {
         return;
+    } else {
+        alert("Booking successful");
     }
-
-    alert("Booking successful");
 }
+    
+// Validate the date and time of the booking
+function validateDAT(dateTimeInput, hours) {
+    const currentDAT = new Date(); // Todays DAT
+    const bookingDAT = new Date(dateTimeInput); // Booking DAT
 
-function isBookingAllowed(dateTimeInput) {
-    const currentDateTime = new Date();
-    const bookingDateTime = new Date(dateTimeInput);
-    // Limit Bookings within 1 month
-    const oneMonthFromNow = new Date(currentDateTime); // Create copy of current date
-    oneMonthFromNow.setMonth(currentDateTime.getMonth() + 1); // Move the date ahead by 1 month
-    if (bookingDateTime > oneMonthFromNow) {
+    // Check the booking is made within 1 month of todays date
+    const oneMonthFromNow = new Date(currentDAT);
+    oneMonthFromNow.setMonth(currentDAT.getMonth() + 1);
+    if (bookingDAT > oneMonthFromNow) {
         alert("Booking cannot be made 1 month ahead from todays date.");
         return false;
-    }
-
-    if (bookingDateTime < currentDateTime) {
+    } 
+    
+    // Check that the booking cannot be made before todays date
+    if (bookingDAT < currentDAT) {
         alert("Booking cannot be made before todays date.");
         return false;
     }
-    // Check the booking is made within the stores operational hours
-    const dayOfWeek = bookingDateTime.getDay();
 
-    // Disallow bookings on Sundays 
-    if (dayOfWeek === 0) {
-        alert("Booking cannot be made outside of operating hours.");
+    const bookingDay = getBookingDay(bookingDAT); // Get the day of the week from the bookingDAT
+    const bookingDayHours = getBookingHours(bookingDay, hours); // Get the opening hours for the given day
+
+    // Check that the bookingDAT is not made on a day when 'closed'
+    if (bookingDayHours === "Closed") {
+        alert("Bookings cannot be made on days when we are closed");
         return false;
     }
 
-    const openHours = {
-        1: { start: "7:00", end: "15:00" }, // Monday
-        2: { start: "7:00", end: "15:00" }, // Tuesday
-        3: { start: "7:00", end: "15:00" }, // Wednesday
-        4: { start: "7:00", end: "15:00" }, // Thursday
-        5: { start: "7:00", end: "15:00" }, // Friday
-        6: { start: "8:00", end: "15:00" }, // Saturday    
+    // Format the bookingDayHours into opening and closing time
+    let [openingTime, closingTime] = bookingDayHours.split(" - "); // Splits into opening and closing times
+    let openDAT = parseTime(new Date(bookingDAT), openingTime); // Set opening time
+    let closeDAT = parseTime(new Date(bookingDAT), closingTime); // Set closing time
+    const adjustedCloseDAT = adjustCloseTime(closeDAT); // Adjust closeDAT by 1 hour to limit bookings to an hour before closing
+    const bookingMinutes = getBookingMinutes(bookingDAT); // Get the booking minutes from bookingDAT
+
+    // Check that the bookingDAT is made during opening hours
+    // Check that the bookingDAT is made 1 hour before closing
+    // Check that the bookingDAT is made on the hour OR at 15, 30, 45 minutes past the hour
+    if (bookingDAT < openDAT) {
+        alert("The booking must be made during our opening hours: " + bookingDayHours);
+        return false;
+    } else if (bookingDAT > adjustedCloseDAT) {
+        alert("The booking must be made 1 hour before we close: " + bookingDayHours);
+        return false;
+    } else if (bookingMinutes === false) {
+        alert("Bookings must be made on the hour or 15, 30, or 45 minutes past the hour");
+    } else {
+        return true; // booking valid
+    }
+}
+
+// Get the booking day from bookingDAT
+function getBookingDay(bookingDAT) {
+    const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const dayOfWeek = daysOfWeek[bookingDAT.getDay()];
+    return dayOfWeek;
+}
+
+// Get the opening hours for the given booking day
+function getBookingHours(dayOfWeek, openingHours) {
+    const dayHours = openingHours[dayOfWeek];
+    return dayHours;
+}
+
+// Converts the opening hours string data into a date format
+function parseTime(date, timeStr) {
+    const [time, modifier] = timeStr.split(" "); // Split into time and AM/PM
+    let [hours, minutes] = time.split(":"); // Split into hours and minutes
+
+    // Convert hours to 24-hour format
+    if (modifier === "PM" && hours !== "12") {
+        hours = parseInt(hours, 10) + 12;
+    } else if (modifier === "AM" && hours === "12") {
+        hours = 0;
     }
 
-    const openTime = new Date(bookingDateTime);
-    const closeTime = new Date(bookingDateTime);
-    const [openHour, openMinute] = openHours[dayOfWeek].start.split(":").map(Number);
-    const [closeHour, closeMinute] = openHours[dayOfWeek].end.split(":").map(Number);
-    openTime.setHours(openHour, openMinute, 0);
-    closeTime.setHours(closeHour, closeMinute, 0);
+    date.setHours(hours, minutes, 0, 0); // Set hours, minutes, seconds, milliseconds
+    return date;
+}
 
-    if (bookingDateTime < openTime || bookingDateTime > closeTime) {
-        return false; // Booking is not allowed if it's outside the open hours
-    }
+// Adjust the closing time by 1 hour
+function adjustCloseTime(closeDAT) {
+    const adjustedCloseDAT = new Date(closeDAT);
+    adjustedCloseDAT.setHours(adjustedCloseDAT.getHours() - 1);
+    return adjustedCloseDAT;
+}
 
-    return true;
+// Bookings can only be made at 0, 15, 30, or 45 minutes past the hour.
+function getBookingMinutes(bookingDAT) {
+    const minutes = bookingDAT.getMinutes(); // Get minutes from booking date
+    const allowedMinutes = [0, 15, 30, 45];
+
+    // Check if the minutes are one of the allowed intervals
+    if (!allowedMinutes.includes(minutes)) {
+        return false; // Invalid booking time
+    } else {
+        return true; // Valid booking time
+    }   
 }

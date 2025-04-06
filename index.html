@@ -260,42 +260,35 @@
     </section>
 
     <!-- Book A Table Section -->
-    <section class="container pt-5rem pb-5rem" id="book">
+    <section id="book" class="container pt-5rem pb-5rem" aria-labelledby="book-heading">
+        <div id="book-heading" class="subheading-container mb-5">
+            <h1 class="display-6 subheading">BOOK A TABLE</h1>
+        </div>
         <div class="row justify-content-center">
-            <div class="col-12 subheading-container mb-5">
-                <h1 class="display-6 subheading">BOOK A TABLE</h1>
-            </div>
             <div class="col-12 col-md-6">
-                <form id="book-form" onsubmit="bookingForm()">
+                <form id="book-form" onsubmit="bookingForm(event);">
                     <!-- Name -->
-                    <div class="mb-4">
-                        <input type="text"
-                            class="form-control form-control-lg bg-light rounded-0" placeholder="Name*" id="name-input"
-                            required>
+                    <div class="book-input-container">
+                        <input id="name-input" class="form-control form-control-lg" type="text" placeholder="Name*" required>
                     </div>
                     <!-- Phone -->
-                    <div class="mb-4">
-                        <input type="tel" class="form-control form-control-lg bg-light rounded-0" placeholder="Phone*"
-                            id="phone-input" required>
-                    </div>
-                    <!-- Date Time -->
-                    <div class="mb-4">
-                        <input type="datetime-local" class="form-control form-control-lg bg-light rounded-0" placeholder="Date"
-                            id="dateTime-input" required>
+                    <div class="book-input-container">
+                        <input id="phone-input" class="form-control form-control-lg" type="tel" placeholder="Phone*" required pattern="[0-9]{10}">
                     </div>
                     <!-- Number of people -->
-                    <div class="mb-4">
-                        <input type="text" class="form-control form-control-lg bg-light rounded-0"
-                            placeholder="Number of people*" id="people-input" required>
+                    <div class="book-input-container">
+                        <input id="people-input" class="form-control form-control-lg" type="number" required placeholder="Number" required pattern="[0-9]{2}">
                     </div>
+                    <!-- Date Time -->
+                    <div class="book-input-container">
+                        <input id="dateTime-input" class="form-control form-control-lg" type="datetime-local" placeholder="Date" required>
+                    </div>    
                     <!-- Message -->
                     <div>
-                        <textarea class="form-control form-control-lg bg-light rounded-0" rows="5"
-                            placeholder="Message" id="message-input"></textarea>
+                        <textarea id="message-input" class="form-control form-control-lg" rows="5" placeholder="Message" aria-label="Add a message"></textarea>
                     </div>
-                    <div class="d-flex flex-column align-items-center">
-                        <button type="submit"
-                            class="btn btn-success btn-lg rounded-0 mt-4 btn-gradient book-btn">CONFIRM</button>
+                    <div id="book-btn-container">
+                        <button id="book-btn" class="btn btn-lg btn-success btn-gradient" type="submit" aria-label="Confirm Booking">CONFIRM</button>
                     </div>
                 </form>
             </div>

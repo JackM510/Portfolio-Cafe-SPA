@@ -1,5 +1,17 @@
 @charset "utf-8";
 
+.book-input-container {
+  margin-bottom: 1.5rem;
+}
+
+/* Default styles for XS screens */ 
+#book-form input,
+#book-form textarea {
+  font-size: 18px;
+  background-color: #F8F9FA;
+  border-radius: 0;
+}
+
 /* BS5 focus effect */
 #book-form input:focus-visible,
 #book-form textarea:focus-visible {
@@ -7,35 +19,43 @@
     box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
-.book-btn {
-  font-weight: 600;
-  letter-spacing: 0.5px;
+#book-form textarea {
+  resize:none;
 }
 
-.book-btn:hover {
+#book-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#book-btn {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: 0;
+  margin-top: 1.5rem;
+}
+
+#book-btn:hover {
   transform: scale(1.1);
   opacity: 0.9;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* BS5 focus effect */
-.book-btn:focus-visible {
+#book-btn:focus-visible {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
-#book-form textarea {
-  resize:none;
-}
-
-@media(max-width: 400px) {
+/* Small screens (>576px) */ 
+@media(min-width: 576px) {
   #book-form input,
   #book-form input::placeholder,
-  .book-btn {
-    font-size: 18px !important;
-  }
-
-  #book {
-    padding-bottom: 5rem !important;
+  #book-form textarea,
+  #book-form textarea::placeholder,
+  #book-btn {
+    font-size: 1.3rem;
   }
 }
