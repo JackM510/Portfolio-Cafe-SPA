@@ -11,11 +11,12 @@ function bookingForm(event) {
     })
     .then(data => {
         const openingHours = data.Hours; // Access the 'Hours' object from menu.json
-        validateInput(openingHours); // Validate the input user input in book-form
+        validateInput(openingHours);
     })
     .catch(error => console.error('Failed to load opening hours:', error));
 }
 
+// Validate the input user input in book-form
 function validateInput(openHours) {
     const name = document.getElementById('name-input').value.trim();
     const phone = document.getElementById('phone-input').value.trim();
@@ -41,13 +42,17 @@ function validateInput(openHours) {
         return;
     } else {
         alert("Booking successful");
+        document.getElementById("book-form").reset();
+        return;
     }
 }
     
 // Validate the date and time of the booking
-function validateDAT(dateTimeInput, hours) {
+function validateDAT(dateTimeInput, openHours) {
     const currentDAT = new Date(); // Todays DAT
     const bookingDAT = new Date(dateTimeInput); // Booking DAT
+    const bookingDay = getBookingDay(bookingDAT); // Get day of week from the bookingDAT
+    const bookingDayHours = getBookingHours(bookingDay, openHours); // Get opening hours for the given day
 
     // Check the booking is made within 1 month of todays date
     const oneMonthFromNow = new Date(currentDAT);
@@ -63,16 +68,13 @@ function validateDAT(dateTimeInput, hours) {
         return false;
     }
 
-    const bookingDay = getBookingDay(bookingDAT); // Get the day of the week from the bookingDAT
-    const bookingDayHours = getBookingHours(bookingDay, hours); // Get the opening hours for the given day
-
     // Check that the bookingDAT is not made on a day when 'closed'
     if (bookingDayHours === "Closed") {
         alert("Bookings cannot be made on days when we are closed");
         return false;
     }
 
-    // Format the bookingDayHours into opening and closing time
+    // Format bookingDayHours into opening and closing time variables
     let [openingTime, closingTime] = bookingDayHours.split(" - "); // Splits into opening and closing times
     let openDAT = parseTime(new Date(bookingDAT), openingTime); // Set opening time
     let closeDAT = parseTime(new Date(bookingDAT), closingTime); // Set closing time
