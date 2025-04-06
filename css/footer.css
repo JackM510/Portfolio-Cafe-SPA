@@ -1,25 +1,42 @@
 @charset "utf-8";
 
+footer {
+  background-color: #F8F9FA;
+}
+
+/* Default styles for XS screens */ 
+#social-heading-container {
+  margin-bottom: 1rem;
+}
+
+#social-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
 #fb-icon {
   color:#1877F2;
-  font-size:2.5rem;
+  font-size:2rem;
+  padding: 1rem;
 }
 
 #fb-icon:hover {
-    transform: scale(1.2);
-    opacity: 0.8;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
+  transform: scale(1.1);
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
   
-  #ig-icon {
-    color:#e1306c;
-    font-size:2.5rem;
-  }
+#ig-icon {
+  color:#e1306c;
+  font-size:2rem;
+  padding: 1rem;
+}
 
 #ig-icon:hover{
-    transform: scale(1.2);
-    opacity: 0.8;
-    transition: transform 0.3s, opacity 0.3s ease;
+  transform: scale(1.1);
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 #fb-icon:focus-visible,
@@ -28,13 +45,10 @@
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
-@media(max-width: 400px) {
+/* Small screens (>576px) */
+@media(min-width: 576px) {
   #fb-icon i,
   #ig-icon i {
-    font-size: 2rem !important;
-  }
-  #social-heading,
-  #social-icons {
-    margin-bottom: 1.5rem !important;
+    font-size: 2.5rem;
   }
 }
