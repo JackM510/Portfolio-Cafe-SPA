@@ -28,7 +28,7 @@ A single-page application developed using Bootstrap 5, HTML, CSS, and JavaScript
 3. Images in the gallery are hoverable and can be clicked to display a modal. The user can select the '<' and '>' icons to view the previous and next images in the gallery. There is also an 'X' icon to close the modal in the top-right corner.
 4. The 'Breakfast', 'Lunch' and 'Drinks' menu tabs in the menu section can be selected to view the tab pane of menu items for each respective section.
 5. The location, email, and phone number in the contact section are all hoverable links and will direct the user to a respective application when selected.
-6. The input and button elements in the booking section are interactive. To make a booking, a valid name, 10-digit phone number, number of people between 1-10, and DAT are required. The date must be within 1 month of today's date and the time must be during the business operating hours and at least 1 hour before closing.
+6. The input and button elements in the booking section are interactive. To make a booking, a valid name, 10-digit phone number, number of people between 1-10, and DAT are required. The date must be within 1 month of today's date and the time must be during the business operating hours and at least 1 hour before closing. The booking time must also be made on the hour or at 15, 30, or 45 minutes past the hour.
 
 # Accessibility
 - Elements in the Navbar, Contact, Book A Table, and Footer sections can be focused by pressing the 'tab' key and selected by pressing the 'enter' key. To navigate to the previous focusable element press 'shift' + 'tab'.
