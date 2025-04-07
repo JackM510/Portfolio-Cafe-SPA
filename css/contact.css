@@ -85,8 +85,8 @@
   color: #212529;
 }
 
-/* XS screens (>400px) */
-@media(min-width: 400px) {
+/* Small screens (>576px) */
+@media(min-width: 576px) {
   .contact-link {
     font-size: 1.3rem;
   }
