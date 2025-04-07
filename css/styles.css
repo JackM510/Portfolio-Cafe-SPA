@@ -1,11 +1,6 @@
 @charset "utf-8";
 
 /* Shared Styles */
-p {
-  font-size:1.3rem;
-  color: grey;
-}
-
 .subheading-container {
   display: flex;
   justify-content: center;
@@ -35,33 +30,40 @@ p {
   padding: 8px 15px;
 }
 
+/* Padding */
 .pt-5rem {
-  padding-top: 5rem !important;
+  padding-top: 5rem;
 }
 
 .pb-5rem {
-  padding-bottom: 5rem !important;
+  padding-bottom: 5rem;
 }
 
-/* Resize font-size for xs displays */
-@media (max-width: 400px) {
+/* Fonts - let BS5 handle font sizes for all screen widths > small */
+p {
+  font-size: 1.3rem;
+  color: grey;
+}
+
+/* Small screens (<576px) */ 
+@media (max-width: 576px) {
   h1 {
-    font-size: 24px !important;
+    font-size: 24px;
   }
 
   h3 {
-    font-size: 22px !important;
+      font-size: 22px;
   }
 
   h4 {
-    font-size: 20px !important;
+      font-size: 20px;
   }
 
   h5 {
-    font-size: 18px !important;
+      font-size: 18px;
   }
 
   p {
-    font-size: 18px !important;
+      font-size: 18px;
   }
 }
