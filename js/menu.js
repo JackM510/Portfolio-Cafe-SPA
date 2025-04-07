@@ -77,7 +77,7 @@ const createMenuCard = (item, container) => {
   // Create the card title (holds the item name, badges and price)
   const cardTitle = document.createElement("h5");
   cardTitle.classList.add("card-title", "align-items-center");
-  cardTitle.innerHTML = `${item.name}`;
+  cardTitle.innerHTML = `${item.name} `;
 
   // Create the dietary badge
   if (item.dietary) {
