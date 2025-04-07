@@ -5,6 +5,7 @@
   object-fit: cover;
   width: 100%;
   height: calc(50vh - 70px);
+  opacity: 0;
 }
 
 #landing-span {
@@ -15,6 +16,7 @@
     transform: translateY(-50%);
     white-space: nowrap;
     padding: 4px 4px;
+    opacity: 0;
 }
 
 #landing-title {
