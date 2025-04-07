@@ -8,6 +8,13 @@ nav {
   height: 70px;
 }
 
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
 /* Default styles for XS screens */ 
 #collapsible-navbar {
   flex-direction: column;
@@ -48,6 +55,8 @@ nav {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.5px;
+  text-align: center;
+  border-radius: 0;
   padding: 8px 12px;
 }
   
