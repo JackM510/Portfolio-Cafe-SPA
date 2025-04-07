@@ -73,11 +73,10 @@
 }
 
 .contact-hours-caret {
-  position: absolute;
-  top: 50%; 
-  transform: translateY(-50%); 
-  left: 100%; 
-  margin-left: 5px; 
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
 }
 
 .contact-day-bold {
