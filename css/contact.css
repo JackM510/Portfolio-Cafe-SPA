@@ -72,11 +72,19 @@
   text-underline-offset: 0.4rem;
 }
 
-.contact-hours-caret {
+.contact-caret-down {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   left: 5px;
+}
+
+.contact-caret-up {
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%); 
+  left: 100%; 
+  margin-left: 5px; 
 }
 
 .contact-day-bold {

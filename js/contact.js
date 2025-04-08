@@ -22,7 +22,7 @@ fetch('./data/hours.json')
 function createCaretIcon(direction) {
     const caretSpan = document.createElement('span');
     const caretIcon = document.createElement('icon');
-    caretIcon.classList = direction === 'down' ? 'bi bi-caret-down-fill contact-hours-caret' : 'bi bi-caret-up-fill contact-hours-caret';
+    caretIcon.classList = direction === 'down' ? 'bi bi-caret-down-fill contact-caret-down' : 'bi bi-caret-up-fill contact-caret-up';
     caretSpan.appendChild(caretIcon);
     return caretSpan;
 }
