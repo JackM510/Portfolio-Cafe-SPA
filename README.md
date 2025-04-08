@@ -15,7 +15,7 @@ A single-page application developed using Bootstrap 5, HTML, CSS, and JavaScript
 - **Footer:** contains linked icons to the business's social media platforms.
 
 # Screenshots
-- The project includes a 'screenshot' directory with images of the application, allowing for easy viewing without the need to clone or download the repository.
+- This project includes a 'screenshot' directory with images of the application for both desktop and mobile views, allowing for easy viewing without the need to clone or download the repository.
 
 # Installation
 **Note:** this project was created to work out of the box with minimum setup. It utilises Bootstrap 5 via a CDN and uses the 'menu.json' file to store the data for the menu instead of needing to set up a back-end database. 
